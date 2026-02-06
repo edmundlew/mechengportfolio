@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     project: any;
@@ -19,12 +20,33 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
             {/* Image Section (70%) */}
             <div className="h-[70%] bg-zinc-100 relative overflow-hidden">
                 {/* Fallback gradient if no image */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-zinc-100 to-zinc-200 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-zinc-100 to-zinc-200" />
 
-                {/* Optional: Add actual Image component here if media exists */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-10 font-bold text-6xl text-zinc-300 select-none">
-                    {project.title.charAt(0)}
-                </div>
+                {/* Media Rendering */}
+                {project.videoSrc ? (
+                    <video
+                        src={project.videoSrc}
+                        muted
+                        autoPlay
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                ) : project.imageSrc ? (
+                    <div className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105">
+                        <Image
+                            src={project.imageSrc}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-10 font-bold text-6xl text-zinc-300 select-none">
+                        {project.title.charAt(0)}
+                    </div>
+                )}
             </div>
 
             {/* Text Section (30%) */}

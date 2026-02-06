@@ -42,6 +42,7 @@
         {
             "institution": "University College London (UCL)",
             "degree": "MEng Mechanical Engineering with Minor in Intelligent Systems",
+            "dates": "September 2023 – Present",
             "grades": "First Class Honours (Year 1: 87.70%, Year 2: 84.56%)",
             "awards": [
                 "Frederic Barnes Waldron Best Student Award (2025): Awarded for the highest overall year average across all years of all undergraduate programmes.",
@@ -61,6 +62,7 @@
         {
             "institution": "Kolej Yayasan UEM",
             "degree": "CAIE A-Levels",
+            "dates": "September 2021 – June 2023",
             "grades": "4A* (Mathematics: 98%, Physics: 97%, Chemistry: 95%, Further Mathematics: 94%)",
             "awards": [
                 "IELTS Overall Band Score 8.5 (Listening: 9.0, Reading: 9.0, Speaking: 8.5, Writing: 8.0)",
@@ -79,6 +81,7 @@
         {
             "institution": "SMK Kuching High",
             "degree": "Sijil Pelajaran Malaysia (SPM)",
+            "dates": "January 2016 – March 2021",
             "grades": "9A+ and 1A",
             "awards": [
                 "Anugerah Khas Pengetua 2020 (Model Student Award): Awarded for outstanding achievements in both academics and extra-curricular activities.",
@@ -104,6 +107,7 @@
         {
             "title": "FLOW Lab Research (UC Berkeley)",
             "role": "Undergraduate Researcher",
+            "imageSrc": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop",
             "technicalTags": [
                 "Python",
                 "Mechatronics",
@@ -134,6 +138,7 @@
                     "description": "Engineered a MATLAB tool using Singular Value Decomposition (SVD) for high-fidelity data compression and edge detection."
                 }
             ],
+            "imageSrc": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2670&auto=format&fit=crop",
             "technicalTags": [
                 "MATLAB",
                 "Numerical Optimization",
@@ -147,6 +152,7 @@
         {
             "title": "UCL Rocketry",
             "role": "Recovery Systems Lead",
+            "imageSrc": "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2670&auto=format&fit=crop",
             "technicalTags": [
                 "Fusion 360",
                 "Electromagnetics",
@@ -161,6 +167,7 @@
         },
         {
             "title": "UCL Engineering Challenges (23/24)",
+            "imageSrc": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2670&auto=format&fit=crop",
             "technicalTags": [
                 "GSA Structural Analysis",
                 "Truss Theory",
@@ -175,6 +182,7 @@
         {
             "title": "UCL Mechathon",
             "role": "Aerodynamics & Design Lead",
+            "imageSrc": "https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2670&auto=format&fit=crop",
             "technicalTags": [
                 "Fusion 360",
                 "Aerodynamics",
