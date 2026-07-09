@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FBFBFD;
+  --foreground: #1D1D1F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle custom scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 5px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Visible focus for keyboard users, invisible for mouse users */
+:focus-visible {
+  outline: 2px solid #0071e3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* Apple Design Typography */
+.page-title {
+  @apply text-3xl md:text-5xl font-bold tracking-tighter text-[#1d1d1f] pt-32 pb-12;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-[#424245] mb-6;
+}
+
+.page-container {
+  @apply max-w-5xl mx-auto px-6;
+}
+
+/* Blog post typography */
+.blog-prose {
+  @apply text-zinc-600 leading-relaxed font-light;
+}
+.blog-prose h1,
+.blog-prose h2 {
+  @apply text-2xl font-semibold text-zinc-800 tracking-tight mt-10 mb-4;
+}
+.blog-prose h3 {
+  @apply text-xl font-semibold text-zinc-800 tracking-tight mt-8 mb-3;
+}
+.blog-prose p {
+  @apply mb-5 text-base md:text-lg;
+}
+.blog-prose a {
+  @apply text-[#0071e3] hover:underline;
+}
+.blog-prose strong {
+  @apply font-semibold text-zinc-800;
+}
+.blog-prose ul,
+.blog-prose ol {
+  @apply mb-5 pl-6 text-base md:text-lg;
+}
+.blog-prose ul {
+  @apply list-disc;
+}
+.blog-prose ol {
+  @apply list-decimal;
+}
+.blog-prose li {
+  @apply mb-1.5;
+}
+.blog-prose blockquote {
+  @apply border-l-2 border-zinc-300 pl-4 italic text-zinc-500 my-6;
+}
+.blog-prose img {
+  @apply rounded-2xl border border-zinc-100 shadow-sm my-8 w-full;
+}
+.blog-prose hr {
+  @apply my-10 border-zinc-100;
+}
+.blog-prose code {
+  @apply text-sm bg-zinc-100 rounded px-1.5 py-0.5 text-zinc-700 font-normal;
+}
+.blog-prose pre {
+  @apply bg-zinc-900 text-zinc-100 rounded-2xl p-5 overflow-x-auto text-sm my-6;
+}
+.blog-prose pre code {
+  @apply bg-transparent p-0 text-zinc-100;
+}

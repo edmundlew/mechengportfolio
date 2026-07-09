@@ -1,0 +1,1587 @@
+{
+  "summary": {
+    "countries": 22,
+    "cities": 77
+  },
+  "cities": [
+    {
+      "name": "Kuching",
+      "country": "Malaysia",
+      "iso": "458",
+      "coords": [
+        110.35,
+        1.55
+      ],
+      "home": true,
+      "visits": [
+        "Home — Kuching, Sarawak"
+      ],
+      "flag": "🇲🇾"
+    },
+    {
+      "name": "Johor Bahru",
+      "country": "Malaysia",
+      "iso": "458",
+      "coords": [
+        103.76,
+        1.49
+      ],
+      "visits": [
+        "March 2023"
+      ],
+      "flag": "🇲🇾"
+    },
+    {
+      "name": "Singapore",
+      "country": "Singapore",
+      "iso": "702",
+      "coords": [
+        103.82,
+        1.35
+      ],
+      "visits": [
+        "December 2012",
+        "June 2019",
+        "December 2019",
+        "October 2022",
+        "March 2023"
+      ],
+      "flag": "🇸🇬"
+    },
+    {
+      "name": "Hong Kong",
+      "country": "China",
+      "iso": "344",
+      "coords": [
+        114.17,
+        22.32
+      ],
+      "visits": [
+        "December 2014"
+      ],
+      "flag": "🇭🇰"
+    },
+    {
+      "name": "Shenzhen",
+      "country": "China",
+      "iso": "156",
+      "coords": [
+        114.06,
+        22.54
+      ],
+      "visits": [
+        "December 2014",
+        "June 2024"
+      ],
+      "flag": "🇨🇳"
+    },
+    {
+      "name": "Tianjin",
+      "country": "China",
+      "iso": "156",
+      "coords": [
+        117.2,
+        39.13
+      ],
+      "visits": [
+        "December 2017"
+      ],
+      "flag": "🇨🇳"
+    },
+    {
+      "name": "Beijing",
+      "country": "China",
+      "iso": "156",
+      "coords": [
+        116.4,
+        39.9
+      ],
+      "visits": [
+        "December 2017"
+      ],
+      "flag": "🇨🇳"
+    },
+    {
+      "name": "Guangzhou",
+      "country": "China",
+      "iso": "156",
+      "coords": [
+        113.26,
+        23.13
+      ],
+      "visits": [
+        "June 2024"
+      ],
+      "flag": "🇨🇳"
+    },
+    {
+      "name": "Perth",
+      "country": "Australia",
+      "iso": "036",
+      "coords": [
+        115.86,
+        -31.95
+      ],
+      "visits": [
+        "March 2016"
+      ],
+      "flag": "🇦🇺"
+    },
+    {
+      "name": "Melbourne",
+      "country": "Australia",
+      "iso": "036",
+      "coords": [
+        144.96,
+        -37.81
+      ],
+      "visits": [
+        "August 2024"
+      ],
+      "flag": "🇦🇺"
+    },
+    {
+      "name": "Sydney",
+      "country": "Australia",
+      "iso": "036",
+      "coords": [
+        151.21,
+        -33.87
+      ],
+      "visits": [
+        "August 2024"
+      ],
+      "flag": "🇦🇺"
+    },
+    {
+      "name": "London",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -0.12,
+        51.51
+      ],
+      "visits": [
+        "June 2019",
+        "September 2023"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Cambridge",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        0.12,
+        52.21
+      ],
+      "visits": [
+        "June 2019",
+        "November 2023",
+        "May–July 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Newcastle",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.61,
+        54.97
+      ],
+      "visits": [
+        "June 2019",
+        "December 2023"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Liverpool",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -2.98,
+        53.41
+      ],
+      "visits": [
+        "June 2019",
+        "May 2024",
+        "May–July 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Bath",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -2.36,
+        51.38
+      ],
+      "visits": [
+        "June 2019"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Edinburgh",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -3.19,
+        55.95
+      ],
+      "visits": [
+        "June 2019"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Dover",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        1.31,
+        51.13
+      ],
+      "visits": [
+        "November 2023"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Lake District",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -3.0,
+        54.46
+      ],
+      "visits": [
+        "December 2023"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Manchester",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -2.24,
+        53.48
+      ],
+      "visits": [
+        "December 2023",
+        "May 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Hastings",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        0.57,
+        50.85
+      ],
+      "visits": [
+        "February 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Brighton",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -0.14,
+        50.82
+      ],
+      "visits": [
+        "March 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Leeds",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.55,
+        53.8
+      ],
+      "visits": [
+        "May 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Oxford",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.26,
+        51.75
+      ],
+      "visits": [
+        "October 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Southend-on-Sea",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        0.71,
+        51.54
+      ],
+      "visits": [
+        "November 2024"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Cardiff",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -3.18,
+        51.48
+      ],
+      "visits": [
+        "January 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Plymouth",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -4.14,
+        50.37
+      ],
+      "visits": [
+        "January 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Land's End",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -5.71,
+        50.07
+      ],
+      "visits": [
+        "January 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Bournemouth",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.88,
+        50.72
+      ],
+      "visits": [
+        "February 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Birmingham",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.9,
+        52.48
+      ],
+      "visits": [
+        "May–July 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Portsmouth",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        -1.09,
+        50.8
+      ],
+      "visits": [
+        "May–July 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Folkestone",
+      "country": "United Kingdom",
+      "iso": "826",
+      "coords": [
+        1.18,
+        51.08
+      ],
+      "visits": [
+        "May–July 2025"
+      ],
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Hamburg",
+      "country": "Germany",
+      "iso": "276",
+      "coords": [
+        9.99,
+        53.55
+      ],
+      "visits": [
+        "April 2024"
+      ],
+      "flag": "🇩🇪"
+    },
+    {
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "iso": "528",
+      "coords": [
+        4.9,
+        52.37
+      ],
+      "visits": [
+        "April 2024"
+      ],
+      "flag": "🇳🇱"
+    },
+    {
+      "name": "Brussels",
+      "country": "Belgium",
+      "iso": "056",
+      "coords": [
+        4.35,
+        50.85
+      ],
+      "visits": [
+        "April 2024"
+      ],
+      "flag": "🇧🇪"
+    },
+    {
+      "name": "Luxembourg",
+      "country": "Luxembourg",
+      "iso": "442",
+      "coords": [
+        6.13,
+        49.61
+      ],
+      "visits": [
+        "April 2024"
+      ],
+      "flag": "🇱🇺"
+    },
+    {
+      "name": "La Rochelle",
+      "country": "France",
+      "iso": "250",
+      "coords": [
+        -1.15,
+        46.16
+      ],
+      "visits": [
+        "May 2024"
+      ],
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Châtelaillon-Plage",
+      "country": "France",
+      "iso": "250",
+      "coords": [
+        -1.09,
+        46.07
+      ],
+      "visits": [
+        "May 2024"
+      ],
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Nantes",
+      "country": "France",
+      "iso": "250",
+      "coords": [
+        -1.55,
+        47.22
+      ],
+      "visits": [
+        "May 2024"
+      ],
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Nice",
+      "country": "France",
+      "iso": "250",
+      "coords": [
+        7.26,
+        43.7
+      ],
+      "visits": [
+        "May 2025"
+      ],
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "Palma de Mallorca",
+      "country": "Spain",
+      "iso": "724",
+      "coords": [
+        2.65,
+        39.57
+      ],
+      "visits": [
+        "November 2024"
+      ],
+      "flag": "🇪🇸"
+    },
+    {
+      "name": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "iso": "070",
+      "coords": [
+        18.41,
+        43.86
+      ],
+      "visits": [
+        "December 2024"
+      ],
+      "flag": "🇧🇦"
+    },
+    {
+      "name": "Zagreb",
+      "country": "Croatia",
+      "iso": "191",
+      "coords": [
+        15.98,
+        45.81
+      ],
+      "visits": [
+        "December 2024"
+      ],
+      "flag": "🇭🇷"
+    },
+    {
+      "name": "Budapest",
+      "country": "Hungary",
+      "iso": "348",
+      "coords": [
+        19.04,
+        47.5
+      ],
+      "visits": [
+        "December 2024"
+      ],
+      "flag": "🇭🇺"
+    },
+    {
+      "name": "Bratislava",
+      "country": "Slovakia",
+      "iso": "703",
+      "coords": [
+        17.11,
+        48.15
+      ],
+      "visits": [
+        "December 2024"
+      ],
+      "flag": "🇸🇰"
+    },
+    {
+      "name": "Kraków",
+      "country": "Poland",
+      "iso": "616",
+      "coords": [
+        19.94,
+        50.06
+      ],
+      "visits": [
+        "December 2024"
+      ],
+      "flag": "🇵🇱"
+    },
+    {
+      "name": "Zakynthos",
+      "country": "Greece",
+      "iso": "300",
+      "coords": [
+        20.9,
+        37.79
+      ],
+      "visits": [
+        "March–April 2025"
+      ],
+      "flag": "🇬🇷"
+    },
+    {
+      "name": "Bergamo",
+      "country": "Italy",
+      "iso": "380",
+      "coords": [
+        9.67,
+        45.7
+      ],
+      "visits": [
+        "May 2025"
+      ],
+      "flag": "🇮🇹"
+    },
+    {
+      "name": "Milan",
+      "country": "Italy",
+      "iso": "380",
+      "coords": [
+        9.19,
+        45.46
+      ],
+      "visits": [
+        "May 2025"
+      ],
+      "flag": "🇮🇹"
+    },
+    {
+      "name": "Prague",
+      "country": "Czech Republic",
+      "iso": "203",
+      "coords": [
+        14.42,
+        50.09
+      ],
+      "visits": [
+        "July 2025"
+      ],
+      "flag": "🇨🇿"
+    },
+    {
+      "name": "San Francisco",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -122.42,
+        37.77
+      ],
+      "visits": [
+        "August 2025",
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Monterey",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -121.89,
+        36.6
+      ],
+      "visits": [
+        "October 2025",
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Los Angeles",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -118.24,
+        34.05
+      ],
+      "visits": [
+        "November 2025",
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Santa Monica",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -118.49,
+        34.02
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Morro Bay",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -120.85,
+        35.37
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "San Simeon",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -121.19,
+        35.64
+      ],
+      "visits": [
+        "November 2025",
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Cambria",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -121.08,
+        35.56
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Santa Cruz",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -122.03,
+        36.97
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Yosemite NP",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -119.54,
+        37.87
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Sequoia & Kings Canyon NP",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -118.57,
+        36.56
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Joshua Tree NP",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -115.9,
+        33.87
+      ],
+      "visits": [
+        "November 2025"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Boston",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -71.06,
+        42.36
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "New York",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -74.0,
+        40.71
+      ],
+      "visits": [
+        "December 2025 – January 2026",
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Chicago",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -87.63,
+        41.88
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Alaska",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -149.9,
+        61.22
+      ],
+      "visits": [
+        "January 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Kailua-Kona",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -155.99,
+        19.64
+      ],
+      "visits": [
+        "March 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Honolulu",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -157.86,
+        21.31
+      ],
+      "visits": [
+        "March 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Austin",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -97.74,
+        30.27
+      ],
+      "visits": [
+        "April 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "San Antonio",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -98.49,
+        29.42
+      ],
+      "visits": [
+        "April 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Las Vegas",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -115.14,
+        36.17
+      ],
+      "visits": [
+        "April 2026",
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Washington, D.C.",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -77.04,
+        38.9
+      ],
+      "visits": [
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "San Diego",
+      "country": "United States",
+      "iso": "840",
+      "coords": [
+        -117.16,
+        32.72
+      ],
+      "visits": [
+        "May–June 2026"
+      ],
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "San Juan",
+      "country": "Puerto Rico",
+      "iso": "630",
+      "coords": [
+        -66.11,
+        18.47
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇵🇷"
+    },
+    {
+      "name": "Vieques",
+      "country": "Puerto Rico",
+      "iso": "630",
+      "coords": [
+        -65.42,
+        18.13
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇵🇷"
+    },
+    {
+      "name": "Luquillo",
+      "country": "Puerto Rico",
+      "iso": "630",
+      "coords": [
+        -65.72,
+        18.37
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇵🇷"
+    },
+    {
+      "name": "San José",
+      "country": "Costa Rica",
+      "iso": "188",
+      "coords": [
+        -84.09,
+        9.93
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇨🇷"
+    },
+    {
+      "name": "La Fortuna & Arenal",
+      "country": "Costa Rica",
+      "iso": "188",
+      "coords": [
+        -84.64,
+        10.47
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇨🇷"
+    },
+    {
+      "name": "Monteverde",
+      "country": "Costa Rica",
+      "iso": "188",
+      "coords": [
+        -84.83,
+        10.31
+      ],
+      "visits": [
+        "December 2025 – January 2026"
+      ],
+      "flag": "🇨🇷"
+    }
+  ],
+  "years": [
+    {
+      "year": "2012",
+      "trips": [
+        {
+          "label": "Singapore",
+          "period": "December 2012",
+          "stops": [
+            "Singapore"
+          ],
+          "flags": [
+            "🇸🇬"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2014",
+      "trips": [
+        {
+          "label": "Hong Kong & Shenzhen",
+          "period": "December 2014",
+          "stops": [
+            "Hong Kong",
+            "Shenzhen"
+          ],
+          "flags": [
+            "🇭🇰",
+            "🇨🇳"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2016",
+      "trips": [
+        {
+          "label": "Perth",
+          "period": "March 2016",
+          "stops": [
+            "Perth"
+          ],
+          "flags": [
+            "🇦🇺"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2017",
+      "trips": [
+        {
+          "label": "Tianjin & Beijing",
+          "period": "December 2017",
+          "stops": [
+            "Tianjin",
+            "Beijing"
+          ],
+          "flags": [
+            "🇨🇳"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "trips": [
+        {
+          "label": "United Kingdom",
+          "period": "June 2019",
+          "stops": [
+            "London",
+            "Cambridge",
+            "Newcastle",
+            "Liverpool",
+            "Bath",
+            "Edinburgh"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Singapore",
+          "period": "June 2019",
+          "stops": [
+            "Singapore"
+          ],
+          "flags": [
+            "🇸🇬"
+          ]
+        },
+        {
+          "label": "Singapore",
+          "period": "December 2019",
+          "stops": [
+            "Singapore"
+          ],
+          "flags": [
+            "🇸🇬"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "trips": [
+        {
+          "label": "Singapore",
+          "period": "October 2022",
+          "stops": [
+            "Singapore"
+          ],
+          "flags": [
+            "🇸🇬"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "trips": [
+        {
+          "label": "Singapore & Johor Bahru",
+          "period": "March 2023",
+          "stops": [
+            "Singapore",
+            "Johor Bahru"
+          ],
+          "flags": [
+            "🇸🇬",
+            "🇲🇾"
+          ]
+        },
+        {
+          "label": "Moved to London",
+          "period": "September 2023",
+          "stops": [
+            "London"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Cambridge",
+          "period": "November 2023",
+          "stops": [
+            "Cambridge"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Dover",
+          "period": "November 2023",
+          "stops": [
+            "Dover"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Winter Trip — Northern England",
+          "period": "December 2023",
+          "stops": [
+            "Newcastle",
+            "Lake District",
+            "Manchester"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "trips": [
+        {
+          "label": "Hastings",
+          "period": "February 2024",
+          "stops": [
+            "Hastings"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Brighton",
+          "period": "March 2024",
+          "stops": [
+            "Brighton"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Germany, Netherlands, Belgium & Luxembourg",
+          "period": "April 2024",
+          "stops": [
+            "Hamburg",
+            "Amsterdam",
+            "Brussels",
+            "Luxembourg"
+          ],
+          "flags": [
+            "🇩🇪",
+            "🇳🇱",
+            "🇧🇪",
+            "🇱🇺"
+          ]
+        },
+        {
+          "label": "United Kingdom",
+          "period": "May 2024",
+          "stops": [
+            "Leeds",
+            "Manchester",
+            "Liverpool"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "France",
+          "period": "May 2024",
+          "stops": [
+            "La Rochelle",
+            "Châtelaillon-Plage",
+            "Nantes"
+          ],
+          "flags": [
+            "🇫🇷"
+          ]
+        },
+        {
+          "label": "China",
+          "period": "June 2024",
+          "stops": [
+            "Shenzhen",
+            "Guangzhou"
+          ],
+          "flags": [
+            "🇨🇳"
+          ]
+        },
+        {
+          "label": "Australia",
+          "period": "August 2024",
+          "stops": [
+            "Melbourne",
+            "Sydney"
+          ],
+          "flags": [
+            "🇦🇺"
+          ]
+        },
+        {
+          "label": "Oxford",
+          "period": "October 2024",
+          "stops": [
+            "Oxford"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Southend-on-Sea",
+          "period": "November 2024",
+          "stops": [
+            "Southend-on-Sea"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Palma de Mallorca",
+          "period": "November 2024",
+          "stops": [
+            "Palma de Mallorca"
+          ],
+          "flags": [
+            "🇪🇸"
+          ]
+        },
+        {
+          "label": "Winter Trip — Central Europe & Balkans",
+          "period": "December 2024",
+          "stops": [
+            "Sarajevo",
+            "Zagreb",
+            "Budapest",
+            "Bratislava",
+            "Kraków"
+          ],
+          "flags": [
+            "🇧🇦",
+            "🇭🇷",
+            "🇭🇺",
+            "🇸🇰",
+            "🇵🇱"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2025",
+      "trips": [
+        {
+          "label": "Family Trip — UK",
+          "period": "January 2025",
+          "stops": [
+            "Cardiff",
+            "Plymouth",
+            "Land's End"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Bournemouth",
+          "period": "February 2025",
+          "stops": [
+            "Bournemouth"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Zakynthos",
+          "period": "March–April 2025",
+          "stops": [
+            "Zakynthos"
+          ],
+          "flags": [
+            "🇬🇷"
+          ]
+        },
+        {
+          "label": "Italy & France",
+          "period": "May 2025",
+          "stops": [
+            "Bergamo",
+            "Milan",
+            "Nice"
+          ],
+          "flags": [
+            "🇮🇹",
+            "🇫🇷"
+          ]
+        },
+        {
+          "label": "Liverpool",
+          "period": "May 2025",
+          "stops": [
+            "Liverpool"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Birmingham",
+          "period": "May 2025",
+          "stops": [
+            "Birmingham"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Cambridge",
+          "period": "June 2025",
+          "stops": [
+            "Cambridge"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Portsmouth",
+          "period": "June 2025",
+          "stops": [
+            "Portsmouth"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Folkestone",
+          "period": "July 2025",
+          "stops": [
+            "Folkestone"
+          ],
+          "flags": [
+            "🇬🇧"
+          ]
+        },
+        {
+          "label": "Czech Republic",
+          "period": "July 2025",
+          "stops": [
+            "Prague"
+          ],
+          "flags": [
+            "🇨🇿"
+          ]
+        },
+        {
+          "label": "Moved to San Francisco",
+          "period": "August 2025",
+          "stops": [
+            "San Francisco"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Monterey",
+          "period": "October 2025",
+          "stops": [
+            "Monterey"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Thanksgiving Trip",
+          "period": "November 2025",
+          "stops": [
+            "Los Angeles",
+            "Santa Monica",
+            "Morro Bay",
+            "San Simeon",
+            "Cambria",
+            "Monterey",
+            "Santa Cruz"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Thanksgiving Trip",
+          "period": "November 2025",
+          "stops": [
+            "Yosemite NP",
+            "Sequoia & Kings Canyon NP",
+            "Joshua Tree NP"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Winter Trip — East Coast & the Tropics",
+          "period": "December 2025 – January 2026",
+          "stops": [
+            "Boston",
+            "New York",
+            "San Juan",
+            "Vieques",
+            "Luquillo",
+            "San José",
+            "La Fortuna & Arenal",
+            "Monteverde",
+            "Chicago"
+          ],
+          "flags": [
+            "🇺🇸",
+            "🇵🇷",
+            "🇨🇷"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2026",
+      "trips": [
+        {
+          "label": "Alaska",
+          "period": "January 2026",
+          "stops": [
+            "Alaska"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Hawaii",
+          "period": "March 2026",
+          "stops": [
+            "Kailua-Kona",
+            "Honolulu"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Texas & Las Vegas",
+          "period": "April 2026",
+          "stops": [
+            "Austin",
+            "San Antonio",
+            "Las Vegas"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        },
+        {
+          "label": "Summer Trip — East Coast & West Coast",
+          "period": "May–June 2026",
+          "stops": [
+            "New York",
+            "Washington, D.C.",
+            "San Diego",
+            "Las Vegas",
+            "Los Angeles",
+            "San Simeon",
+            "San Francisco"
+          ],
+          "flags": [
+            "🇺🇸"
+          ]
+        }
+      ]
+    }
+  ]
+}

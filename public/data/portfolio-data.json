@@ -1,0 +1,325 @@
+{
+    "personalInfo": {
+        "name": "Edmund",
+        "title": "Mechanical Engineering Student",
+        "contact": {
+            "email": "edmundlew@berkeley.edu / edmund.lew.23@ucl.ac.uk",
+            "social": [
+                {
+                    "platform": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/edmund-lew",
+                    "mediaPath": [],
+                    "longDescription": ""
+                }
+            ]
+        },
+        "longDescription": "I grew up in Kuching, Sarawak, and now work between two of the world's best engineering schools, in London and Berkeley. I'm an MEng student at UCL on track for First Class Honours — winner of the Frederic Barnes Waldron Best Student Award — and just finished an exchange year at UC Berkeley with a 4.00 GPA. Along the way I've cooled photon detectors at Berkeley's FLOW Lab, built the ServoMag parachute ejection system that flew at the Spaceport America Cup, made 1kg of balsa carry a record 235N, and designed building services at Arup for London's museums. Home still matters: I founded the Sarawak Student Initiative to mentor students across my state.",
+        "mediaArray": [],
+        "toolkit": [
+            "MATLAB",
+            "Fusion 360",
+            "Revit & BIM",
+            "Finite Element Analysis",
+            "Mathematical Modelling",
+            "Rapid Prototyping"
+        ]
+    },
+    "education": [
+        {
+            "institution": "University College London (UCL)",
+            "degree": "MEng Mechanical Engineering with Minor in Intelligent Systems",
+            "dates": "September 2023 – Present",
+            "grades": "First Class Honours (Year 1: 87.70%, Year 2: 84.56%)",
+            "awards": [
+                "Frederic Barnes Waldron Best Student Award (2025): Awarded for the highest overall year average across all years of all undergraduate programmes.",
+                "Best Student Award Mechanical Engineering (2025): Awarded for the highest overall year average in the Mechanical Engineering programme.",
+                "Goldsmid Prize (2025): Awarded for outstanding academic performance for first and second-year undergraduate students at UCL Mechanical Engineering."
+            ],
+            "keyModules": [
+                "Year 1: Engineering Challenges, Mathematical Modelling and Analysis I, Design and Professional Skills I, Introduction to Mechanical Engineering, Mechanical Engineering Practical Skills I, Introduction to Thermodynamics and Fluid Mechanics, Engineering Dynamics, Fundamentals of Materials I",
+                "Year 2: Intelligent Systems, Mathematical Modelling and Analysis II, Manufacturing and Design, Control and Instrumentation, Intermediate Thermodynamics and Fluid Mechanics, Mechanics of Solids and Structures, Engineering Materials: Failures and Design, Design and Professional Skills II"
+            ],
+            "longDescription": "MEng Mechanical Engineering with a Minor in Intelligent Systems, on track for First Class Honours with year averages of 87.70% and 84.56%. Ranked top of the cohort in both years, earning the Frederic Barnes Waldron Best Student Award — for the highest year average across all UCL undergraduate programmes — alongside the Goldsmid Prize and Best Student in Mechanical Engineering.",
+            "mediaArray": [],
+            "certPaths": [
+                "/assets/education/certs/ucl-transcript.jpg"
+            ]
+        },
+        {
+            "institution": "University of California, Berkeley",
+            "degree": "BSc Mechanical Engineering",
+            "dates": "August 2025 – May 2026",
+            "grades": "CGPA 4.00",
+            "awards": [],
+            "keyModules": [
+                "MECENG 108: Mechanical Properties of Engineering Materials (Grade A)",
+                "MECENG 109: Heat Transfer (Grade A)",
+                "CIVENG 11: Engineered Systems and Sustainability (Grade A)",
+                "CIVENG 126: Engineering Dynamics and Vibrations (Grade A)",
+                "MECENG 118: Introduction to Nanotechnology and Nanoscience (Grade A)",
+                "MECENG 127: Introduction to Composite Materials (Grade A+)",
+                "MECENG C180: Engineering Analysis using the Finite Element Method (Grade A+)",
+                "ENGIN 125: Engineering, Ethics and Society (Grade A+)"
+            ],
+            "longDescription": "Selected for the UCEAP Reciprocity exchange at UC Berkeley, deepening my core in materials and structures: composite materials, FEA, and mechanical behaviour of materials, alongside thermal systems and dynamics. Complemented coursework with research at the FLOW Lab, completing the year with a 4.00 GPA.",
+            "mediaArray": [],
+            "certPaths": [
+                "/assets/education/certs/berkeley-transcript.jpg"
+            ]
+        },
+        {
+            "institution": "Kolej Yayasan UEM",
+            "degree": "CAIE A-Levels",
+            "dates": "September 2021 – June 2023",
+            "grades": "4A* (Mathematics: 98%, Physics: 97%, Chemistry: 95%, Further Mathematics: 94%)",
+            "awards": [
+                "IELTS Overall Band Score 8.5 (Listening: 9.0, Reading: 9.0, Speaking: 8.5, Writing: 8.0)",
+                "Vice President: KYUEM Engineering Society",
+                "Vice President: KYUEM Badminton Club (KYBAD)",
+                "Event Manager: TedX@KYUEM 2022",
+                "Secretary: House of Diamond"
+            ],
+            "longDescription": "4A* in CAIE A-Levels (Mathematics 98%, Physics 97%, Chemistry 95%, Further Mathematics 94%) while serving as Vice President of the Engineering Society and organising TEDx@KYUEM. Also represented the college on the badminton team and served as Vice President of KY Badminton (KYBAD).",
+            "mediaArray": [],
+            "certPaths": [
+                "/assets/education/certs/kyuem-as.jpg",
+                "/assets/education/certs/kyuem-a2.jpg"
+            ]
+        },
+        {
+            "institution": "SMK Kuching High",
+            "degree": "Sijil Pelajaran Malaysia (SPM)",
+            "dates": "January 2016 – March 2021",
+            "grades": "9A+ and 1A",
+            "awards": [
+                "Anugerah Khas Pengetua 2020 (Model Student Award): Awarded for outstanding achievements in both academics and extra-curricular activities.",
+                "Treasurer of the Executive Board of Prefects (2019/2020)",
+                "Treasurer of the Board of Librarians (2019/2020)",
+                "Vice Editor of the School Magazine",
+                "Head Photographer",
+                "President of Boys' Brigade Club",
+                "Robotics Club Member"
+            ],
+            "keyModules": [
+                "A+: Mathematics, Additional Mathematics, Physics, Chemistry, Biology, Bahasa Melayu, English, Moral Studies, History",
+                "A: Chinese Language"
+            ],
+            "longDescription": "SPM: 9A+ and 1A, awarded the Anugerah Khas Pengetua 2020 (Model Student Award) for combined academic and extracurricular achievement, alongside executive roles across the school's prefect, librarian, and student boards.",
+            "mediaArray": [],
+            "certPaths": [
+                "/assets/education/certs/kuching-high-spm.jpg"
+            ]
+        }
+    ],
+    "technicalProjects": [
+        {
+            "title": "FLOW Lab Research (UC Berkeley)",
+            "role": "Undergraduate Researcher",
+            "imageSrc": "/projects/flow-lab/cooling-rig.jpg",
+            "technicalTags": [
+                "Python",
+                "Mechatronics",
+                "3D Printing",
+                "Thermal Control"
+            ],
+            "metrics": [],
+            "longDescription": "Designed a physical enclosure for a high-sensitivity ME3 Photon Detector array used for flow regime analysis. Developed a Raspberry Pi Pico W-based cooling controller with PWM pump regulation and a visual/auditory alarm system to prevent thermal damage. Fabricated a custom air generation module with a high-efficiency fan funnel and MEMS velocity sensor.",
+            "mediaArray": [],
+            "reportUrl": "/papers/photon-detector-cooling.pdf"
+        },
+        {
+            "title": "Mathematical Modelling",
+            "subProjects": [
+                {
+                    "title": "Population Modelling",
+                    "description": "Fitted Malthusian and logistic growth models to two centuries of census data in MATLAB, estimating intrinsic growth rates and carrying capacity from real-world records."
+                },
+                {
+                    "title": "Pandemic Simulation",
+                    "description": "Derived the SIR compartmental equations from first principles and simulated COVID-19 and H1N1 outbreak scenarios, quantified via least squares regression and Euler's method."
+                },
+                {
+                    "title": "Footbridge Dynamics",
+                    "description": "Modelled pedestrian-induced lateral bridge vibration as a damped second-order ODE under square-wave gait forcing — solved with Fourier series and finite differences, closing with a sensitivity study across walking frequencies (0.7–1.2 Hz)."
+                },
+                {
+                    "title": "Image Compression & Edge Detection",
+                    "description": "Applied eigendecomposition and rank-r SVD to compress grayscale images, and vector calculus gradient operators for edge detection — visualising the fidelity/storage trade-off across compression levels."
+                }
+            ],
+            "imageSrc": "/projects/math-modelling/svd-compression.jpg",
+            "technicalTags": [
+                "MATLAB",
+                "Numerical Optimization",
+                "ODEs",
+                "Vector Calculus"
+            ],
+            "metrics": [],
+            "longDescription": "A two-year arc of modelling coursework at UCL (ENGF0003 & ENGF0004), turning analytical mathematics into working MATLAB simulations of real systems. The work spans fitting logistic growth models to two centuries of population data, simulating epidemics with SIR compartmental models, predicting pedestrian-induced footbridge vibrations with Fourier series and finite-difference schemes, and compressing images via eigendecomposition and SVD.",
+            "mediaArray": [
+                "/projects/math-modelling/bridge-sensitivity.jpg",
+                "/projects/math-modelling/sir-scenarios.jpg"
+            ]
+        },
+        {
+            "title": "UCL Rocketry",
+            "role": "Recovery Systems Lead",
+            "imageSrc": "/projects/rocket/genesis-2.jpg",
+            "technicalTags": [
+                "Fusion 360",
+                "Electromagnetics",
+                "Systems Engineering"
+            ],
+            "metrics": [
+                "1st Place (National Rocketry Championships 2024)",
+                "#1 UK/EU entrant (Spaceport America Cup 2025)"
+            ],
+            "longDescription": "Designed the ServoMag parachute ejection system, utilizing a servomotor and electromagnet for precise electronic actuation. Developed a dual-deployment recovery system with main and drogue parachutes, leading to a successful recovery and top-ranking at the Spaceport America Cup.",
+            "mediaArray": [
+                "/projects/rocket/genesis-1.jpg",
+                "/projects/rocket/murphy.jpg",
+                "/projects/rocket/flight.mp4"
+            ]
+        },
+        {
+            "title": "UCL Engineering Challenges",
+            "imageSrc": "/projects/pylon/pylon-3.jpg",
+            "technicalTags": [
+                "GSA Structural Analysis",
+                "Truss Theory",
+                "Material Optimization"
+            ],
+            "metrics": [
+                "235N load sustained"
+            ],
+            "longDescription": "Engineered a 1kg balsa wood pylon using GSA Structural Analysis and truss theory. The design successfully sustained a record-breaking load of 235N during physical performance testing.",
+            "mediaArray": [
+                "/projects/pylon/pylon-2.jpg",
+                "/projects/pylon/pylon-1.jpg",
+                "/projects/pylon/pylon-4.jpg"
+            ]
+        },
+        {
+            "title": "UCL Mechathon",
+            "role": "Aerodynamics & Design Lead",
+            "imageSrc": "/projects/mechathon/glider-2.jpg",
+            "technicalTags": [
+                "Fusion 360",
+                "Aerodynamics",
+                "Laser Cutting",
+                "3D Printing"
+            ],
+            "metrics": [
+                "1st Runner Up (Top 2 out of 15 teams)"
+            ],
+            "longDescription": "Collaborated in a five-member team to design and manufacture an elastic-band-powered aircraft within a 48-hour development cycle. Utilized Fusion 360 to model an aerodynamically optimized glider and employed laser cutting and 3D printing to achieve first runner-up status.",
+            "mediaArray": [
+                "/projects/mechathon/glider-2.jpg",
+                "/projects/mechathon/glider-1.jpg",
+                "/projects/mechathon/flight-2.mp4",
+                "/projects/mechathon/flight-3.mp4"
+            ],
+            "videoSrc": "/projects/mechathon/flight-1.mp4"
+        }
+    ],
+    "professionalAndLeadership": [
+        {
+            "organization": "Ove Arup & Partners (London, UK)",
+            "role": "Mechanical Engineering Intern",
+            "dates": "June 2025 – July 2025",
+            "skillsAcquired": [
+                "BIM",
+                "Revit",
+                "Bluebeam Revu",
+                "Dalux",
+                "Embodied Carbon Calculation"
+            ],
+            "longDescription": "Contributed to high-profile projects including a specialist research facility and two prominent London museums. Designed condensate routing for MVHR units using Dalux and conducted pressure duct calculations and sizing within BIM and Revit environments. Performed area scheduling and AHU service classification in Bluebeam Revu, and utilized Arup’s in-house tools for embodied carbon analysis of FCU servicing options.",
+            "mediaArray": []
+        },
+        {
+            "organization": "Sarawak Student Initiative (SSI)",
+            "role": "Founder and Advisor",
+            "dates": "December 2021 – Present",
+            "skillsAcquired": [
+                "Strategic Planning",
+                "Stakeholder Management",
+                "Public Speaking",
+                "Notion"
+            ],
+            "longDescription": "Founded an initiative to bridge the educational resource gap for secondary students in Sarawak. Orchestrated flagship education roadshows across five cities—Kuching, Miri, Bintulu, Sibu, and Kota Samarahan—and managed scholarship talks attracting over 100 participants. Collaborated with entities such as Sarawak Energy Berhad and Yayasan Hasanah to deliver workshops and developed a centralized scholarship resource via Notion.",
+            "mediaArray": []
+        },
+        {
+            "organization": "Boys’ Brigade in Malaysia",
+            "role": "Sergeant, Band Major, and NCO Council Chairman",
+            "dates": "January 2011 – September 2023",
+            "skillsAcquired": [
+                "Team Leadership",
+                "Project Coordination",
+                "Drill Instruction",
+                "Musical Direction"
+            ],
+            "longDescription": "Over a 12-year tenure, I directed weekly parade meetings involving drill, first aid, and camping activities. As Band Major, I led the percussion, woodwind, and brass sections for performances and oversaw the planning and execution of numerous leadership and musical camps.",
+            "mediaArray": []
+        }
+    ],
+    "papers": [
+        {
+            "title": "Implementation and Control of a Cooling Subsystem for an ME3 X-ray Photon Detector Enclosure",
+            "course": "MECENG 196 · Undergraduate Research (FLOW Lab)",
+            "authors": "Edmund Lew Teng Jun",
+            "solo": true,
+            "abstract": "Design, assembly, and control of a closed-loop coolant system for an X-ray photon detector — a temperature-banded PWM control scheme on a Raspberry Pi Pico 2W, a 180W thermoelectric heat exchanger loop, and validation against the detector's 40°C thermal safety threshold.",
+            "tags": [
+                "Thermal Systems",
+                "Control",
+                "Embedded Hardware"
+            ],
+            "pdf": "/papers/photon-detector-cooling.pdf",
+            "pages": 16
+        },
+        {
+            "title": "Phonon-Glass Electron-Crystal (PGEC) Behaviour in Nanowire-Based Solid-State Heat Pumps for Residential Cooling",
+            "course": "MECENG 118 · Nanotechnology and Nanoscience",
+            "authors": "Edmund Lew Teng Jun",
+            "solo": true,
+            "abstract": "Investigates silicon nanowire thermoelectrics as a refrigerant-free alternative to vapor-compression cooling, analysing how phonon-boundary scattering can decouple thermal and electrical conductivity to raise device efficiency.",
+            "tags": [
+                "Nanotechnology",
+                "Thermoelectrics",
+                "Sustainability"
+            ],
+            "pdf": "/papers/nanowire-heat-pumps.pdf",
+            "pages": 8
+        },
+        {
+            "title": "Effect of Hierarchy on the Mechanical Performance of Honeycomb Structures",
+            "course": "MECENG 127 · Composite Materials",
+            "authors": "with J. Merioles, Y. R. Ioriya, J. Kim, J. Park",
+            "solo": false,
+            "abstract": "FEA comparison of standard versus first-order hierarchical honeycombs in carbon fiber-Onyx composite, quantifying effective stiffness, peak principal stress, and strain energy under in-plane and out-of-plane loading.",
+            "tags": [
+                "FEA",
+                "Composites",
+                "Structural Mechanics"
+            ],
+            "pdf": "/papers/honeycomb-hierarchy.pdf",
+            "pages": 10
+        },
+        {
+            "title": "The Accountability Gap in Autonomous Defense Systems: An Ethical Audit of U.S. Regulations and Engineering",
+            "course": "ENGIN 125 · Engineering, Ethics and Society",
+            "authors": "with A. Wang, N. Luo, E. Wei",
+            "solo": false,
+            "abstract": "An audit of how U.S. regulatory frameworks assign — and fail to assign — responsibility when autonomous weapons systems cause harm, and what that gap demands of the engineers who build them.",
+            "tags": [
+                "Ethics",
+                "Policy",
+                "Autonomous Systems"
+            ],
+            "pdf": "/papers/autonomous-defense-ethics.pdf",
+            "pages": 7
+        }
+    ]
+}
