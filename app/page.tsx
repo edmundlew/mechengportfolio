@@ -2,30 +2,35 @@ import Link from "next/link";
 import Image from "next/image";
 import { getPortfolioData } from "@/lib/data";
 import Hero from "@/components/Hero";
+import Reveal from "@/components/Reveal";
 
 const exploreLinks = [
     {
         title: "Education",
         href: "/education",
         watermark: "01",
+        accent: "group-hover:text-sky-100",
         description: "Berkeley, UCL, and the road there — grades, awards, and key modules.",
     },
     {
         title: "Projects",
         href: "/projects",
         watermark: "02",
+        accent: "group-hover:text-violet-100",
         description: "Rocketry, research, and computational modelling challenges.",
     },
     {
         title: "Experience",
         href: "/experience",
         watermark: "03",
+        accent: "group-hover:text-emerald-100",
         description: "Arup internship and leadership across engineering and community.",
     },
     {
         title: "Interests",
         href: "/interests",
         watermark: "04",
+        accent: "group-hover:text-amber-100",
         description: "Photography from the road, and a map of 22 countries so far.",
     },
 ];
@@ -40,6 +45,7 @@ export default async function Home() {
 
             {/* About Section - Photo + Statement */}
             <section className="px-6 pb-20 max-w-4xl mx-auto w-full">
+                <Reveal>
                 <div className="bg-white/50 backdrop-blur-sm border border-zinc-100 p-8 md:p-10 rounded-3xl shadow-sm">
                     <div className="grid grid-cols-1 md:grid-cols-[260px,1fr] gap-8 md:gap-10 items-start">
                         {/* Portrait — natural 2:3 aspect ratio, never cropped */}
@@ -56,7 +62,7 @@ export default async function Home() {
 
                         {/* Statement */}
                         <div>
-                            <h2 className="text-2xl font-semibold mb-5 text-zinc-800 tracking-tight">About Me</h2>
+                            <h2 className="font-display text-2xl font-semibold mb-5 text-zinc-800 tracking-tight">About Me</h2>
                             <p className="text-base md:text-lg text-zinc-600 leading-relaxed font-light">
                                 {data.personalInfo.longDescription}
                             </p>
@@ -77,20 +83,21 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
+                </Reveal>
             </section>
 
             {/* Explore Cards */}
             <section className="px-6 pb-32 max-w-5xl mx-auto w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {exploreLinks.map((link) => (
+                    {exploreLinks.map((link, i) => (
+                        <Reveal key={link.href} delay={i * 0.08} className="h-full">
                         <Link
-                            key={link.href}
                             href={link.href}
-                            className="group relative bg-white border border-zinc-100 rounded-3xl p-8 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                            className="group relative block h-full bg-white border border-zinc-100 rounded-3xl p-8 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                         >
                             <span
                                 aria-hidden
-                                className="absolute -top-4 -right-2 text-[5rem] font-bold leading-none text-zinc-100/80 select-none pointer-events-none group-hover:text-zinc-100 transition-colors"
+                                className={`absolute -top-4 -right-2 text-[5rem] font-bold leading-none text-zinc-100/80 select-none pointer-events-none transition-colors ${link.accent}`}
                             >
                                 {link.watermark}
                             </span>
@@ -107,6 +114,7 @@ export default async function Home() {
                                 </svg>
                             </span>
                         </Link>
+                        </Reveal>
                     ))}
                 </div>
             </section>

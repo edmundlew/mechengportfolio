@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -16,7 +17,24 @@ body {
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
+}
+
+/* Hide scrollbars on horizontally scrollable pill nav */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* KaTeX equations scroll instead of overflowing on narrow screens */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 /* Respect users who prefer reduced motion */

@@ -20,6 +20,18 @@ interface TravelMapProps {
 
 const GEO_URL = '/data/world-50m.json';
 
+/**
+ * Show a single month per visit: "December 2025 – January 2026" → "December 2025",
+ * "March–April 2025" → "March 2025". Non-date labels (e.g. Home) pass through.
+ */
+function formatVisit(visit: string) {
+    const month = visit.match(
+        /January|February|March|April|May|June|July|August|September|October|November|December/
+    );
+    const year = visit.match(/\d{4}/);
+    return month && year ? `${month[0]} ${year[0]}` : visit;
+}
+
 export default function TravelMap({ cities, summary }: TravelMapProps) {
     const [hovered, setHovered] = useState<City | null>(null);
     const [selected, setSelected] = useState<City | null>(null);
@@ -129,7 +141,7 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
 
             {/* Selected city card (pinned on click) */}
             {selected && (
-                <div className="absolute z-30 top-16 right-3 md:right-5 bg-white/95 backdrop-blur-md border border-zinc-200 rounded-2xl shadow-2xl p-5 w-[240px]">
+                <div className="absolute z-30 top-16 right-3 md:right-5 bg-white/95 backdrop-blur-md border border-zinc-200 rounded-2xl shadow-2xl p-5 w-[240px] max-w-[calc(100%-1.5rem)]">
                     <button
                         onClick={() => setSelected(null)}
                         aria-label="Close"
@@ -150,7 +162,7 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
                     </p>
                     <ul className="text-xs text-zinc-600 space-y-1 max-h-36 overflow-y-auto pr-1">
                         {selected.visits.map((v) => (
-                            <li key={v}>{v}</li>
+                            <li key={v}>{formatVisit(v)}</li>
                         ))}
                     </ul>
                 </div>

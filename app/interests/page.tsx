@@ -6,6 +6,7 @@ import PageHeader from "@/components/PageHeader";
 import PhotoGallery from "@/components/PhotoGallery";
 import TravelMap from "@/components/TravelMap";
 import TravelTimeline from "@/components/TravelTimeline";
+import Reveal from "@/components/Reveal";
 import { getBlogPosts } from "@/lib/blog";
 
 export const metadata = {
@@ -36,6 +37,45 @@ function getTravels() {
     return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
+/**
+ * Reshape the trip-based travel data into country visits:
+ * each trip is split per country — flag, cities, country name, month only.
+ */
+function buildCountryTimeline(travels: any) {
+    const cityIndex: Record<string, { country: string; flag: string }> = {};
+    travels.cities.forEach((c: any) => {
+        cityIndex[c.name] = { country: c.country, flag: c.flag || "" };
+    });
+
+    return travels.years.map((y: any) => ({
+        year: y.year,
+        entries: y.trips.flatMap((trip: any) => {
+            // Group this trip's stops by country, preserving stop order
+            const groups: { country: string; flag: string; cities: string[] }[] = [];
+            trip.stops.forEach((stop: string) => {
+                const info = cityIndex[stop] || {
+                    country: "",
+                    flag: trip.flags?.[0] || "",
+                };
+                const existing = groups.find((g) => g.country === info.country);
+                if (existing) existing.cities.push(stop);
+                else groups.push({ country: info.country, flag: info.flag, cities: [stop] });
+            });
+            // Single month only: "March–April 2025" → "March", "December 2025 – January 2026" → "December"
+            const monthMatch = trip.period.match(
+                /January|February|March|April|May|June|July|August|September|October|November|December/
+            );
+            const month = monthMatch ? monthMatch[0] : trip.period.replace(/\s*\d{4}$/, "");
+            return groups.map((g) => ({
+                flag: g.flag,
+                cities: g.cities,
+                country: g.country,
+                month,
+            }));
+        }),
+    }));
+}
+
 export default function InterestsPage() {
     const photos = getPhotos();
     const travels = getTravels();
@@ -47,6 +87,8 @@ export default function InterestsPage() {
                 title="Interests"
                 description="Away from the workbench — the world through my camera, the map of everywhere it's taken me, and a few stories from along the way."
                 watermark="04"
+                accentWatermark="text-amber-100/70"
+                accentBorder="border-amber-200"
             />
 
             {/* Photography */}
@@ -62,6 +104,7 @@ export default function InterestsPage() {
 
             {/* Travels */}
             <section className="mt-20">
+                <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                     Travels
                 </h2>
@@ -70,13 +113,15 @@ export default function InterestsPage() {
                 </p>
 
                 <TravelMap cities={travels.cities} summary={travels.summary} />
+                </Reveal>
 
-                {/* Timeline — collapsible by year, newest first */}
-                <TravelTimeline years={travels.years} />
+                {/* Timeline — collapsible by year, newest first, grouped by country */}
+                <TravelTimeline years={buildCountryTimeline(travels)} />
             </section>
 
             {/* Blog */}
             <section className="mt-20">
+                <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                     Stories
                 </h2>
@@ -143,6 +188,7 @@ export default function InterestsPage() {
                         ))}
                     </div>
                 )}
+                </Reveal>
             </section>
         </div>
     );

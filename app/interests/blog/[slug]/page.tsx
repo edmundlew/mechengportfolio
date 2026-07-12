@@ -51,7 +51,7 @@ export default function BlogPostPage({
             {/* Header */}
             <header className="mb-10">
                 <p className="text-sm text-zinc-400 mb-3">{post.dateFormatted}</p>
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-zinc-900">
+                <h1 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-zinc-900">
                     {post.title}
                 </h1>
             </header>

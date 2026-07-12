@@ -15,7 +15,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
         <motion.div
             onClick={onClick}
             whileHover={{ scale: 1.02 }}
-            className="group relative flex-shrink-0 w-[85vw] sm:w-[500px] md:w-[600px] lg:w-[700px] aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] bg-white rounded-3xl overflow-hidden border border-zinc-200/50 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+            className="group relative flex-shrink-0 w-[calc(100vw-5.5rem)] sm:w-[500px] md:w-[600px] lg:w-[700px] aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] bg-white rounded-3xl overflow-hidden border border-zinc-200/50 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
         >
             {/* Image Section (70%) */}
             <div className="h-[70%] bg-zinc-100 relative overflow-hidden">

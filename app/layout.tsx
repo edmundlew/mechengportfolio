@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import "./math-styles"; // Import global math styles
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+const fraunces = Fraunces({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-display",
+    axes: ["opsz"],
+});
 
 export const metadata: Metadata = {
     title: {
@@ -36,7 +42,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} antialiased selection:bg-blue-100 selection:text-blue-900`}>
+            <body className={`${inter.className} ${fraunces.variable} antialiased selection:bg-blue-100 selection:text-blue-900`}>
                 <Navbar />
                 <main className="min-h-screen flex flex-col bg-background text-foreground pt-20">
                     {children}

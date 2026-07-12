@@ -37,7 +37,7 @@ export default function Hero() {
                 <motion.h1
                     variants={item}
                     style={{ fontSize: "clamp(2.75rem, 7.5vw, 6.5rem)", lineHeight: 1.02 }}
-                    className="font-bold tracking-tighter text-zinc-900"
+                    className="font-display font-bold tracking-tight text-zinc-900"
                 >
                     Hi, I&apos;m{" "}
                     <span className="bg-gradient-to-b from-zinc-900 via-zinc-700 to-zinc-400 bg-clip-text text-transparent">
@@ -68,9 +68,9 @@ export default function Hero() {
                 {/* Awards Badge */}
                 <motion.div
                     variants={item}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-200/70 bg-white/60 backdrop-blur-sm text-[0.65rem] md:text-xs font-medium tracking-[0.2em] text-zinc-500 uppercase shadow-sm"
+                    className="inline-flex flex-wrap items-center justify-center text-center gap-2 px-4 py-1.5 max-w-full rounded-full border border-zinc-200/70 bg-white/60 backdrop-blur-sm text-[0.65rem] md:text-xs font-medium tracking-[0.2em] text-zinc-500 uppercase shadow-sm"
                 >
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
                     4.00 GPA · Frederic Barnes Waldron Best Student Award
                 </motion.div>
 

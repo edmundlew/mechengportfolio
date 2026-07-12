@@ -14,6 +14,8 @@ export default async function ProjectsPage() {
                 title="Projects"
                 description="Engineering challenges I've built — and the research I've written along the way."
                 watermark="02"
+                accentWatermark="text-violet-100/70"
+                accentBorder="border-violet-200"
             />
 
             {/* Technical Projects */}
