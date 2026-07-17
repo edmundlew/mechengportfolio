@@ -1,6 +1,8 @@
 'use client';
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const ROTATING_WORDS = ['Engineer', 'Photographer', 'Traveller'];
 
 const container = {
     hidden: {},
@@ -19,6 +21,16 @@ const item = {
 };
 
 export default function Hero() {
+    const [wordIndex, setWordIndex] = useState(0);
+
+    useEffect(() => {
+        const id = setInterval(
+            () => setWordIndex((i) => (i + 1) % ROTATING_WORDS.length),
+            2400
+        );
+        return () => clearInterval(id);
+    }, []);
+
     return (
         <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-6 text-center w-full mx-auto overflow-hidden">
             {/* Ambient background glow */}
@@ -45,6 +57,21 @@ export default function Hero() {
                     </span>
                 </motion.h1>
 
+                {/* Dimension-line annotation — engineering drawing flourish */}
+                <motion.div
+                    variants={item}
+                    aria-hidden
+                    className="flex items-center gap-3 font-mono text-[0.6rem] md:text-[0.65rem] text-zinc-400 tracking-[0.2em] uppercase select-none -mt-1"
+                >
+                    <span className="relative block w-12 md:w-20 h-px bg-zinc-300">
+                        <span className="absolute left-0 -top-[3px] h-[7px] w-px bg-zinc-300" />
+                    </span>
+                    Est. 2003 · Kuching
+                    <span className="relative block w-12 md:w-20 h-px bg-zinc-300">
+                        <span className="absolute right-0 -top-[3px] h-[7px] w-px bg-zinc-300" />
+                    </span>
+                </motion.div>
+
                 {/* Sub-Headline */}
                 <motion.p
                     variants={item}
@@ -53,16 +80,24 @@ export default function Hero() {
                     Mechanical Engineering @ UC Berkeley &amp; UCL
                 </motion.p>
 
-                {/* Specialist Triad */}
+                {/* Rotating specialist word */}
                 <motion.div
                     variants={item}
-                    className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[0.65rem] md:text-sm font-medium tracking-[0.25em] text-zinc-400 uppercase"
+                    className="h-5 md:h-6 overflow-hidden text-[0.65rem] md:text-sm font-medium tracking-[0.25em] text-zinc-400 uppercase"
+                    aria-label="Engineer, Photographer, Traveller"
                 >
-                    <span>Engineer</span>
-                    <span className="text-zinc-300">•</span>
-                    <span>Photographer</span>
-                    <span className="text-zinc-300">•</span>
-                    <span>Traveller</span>
+                    <AnimatePresence mode="wait">
+                        <motion.span
+                            key={ROTATING_WORDS[wordIndex]}
+                            initial={{ y: '110%', opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: '-110%', opacity: 0 }}
+                            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                            className="block"
+                        >
+                            {ROTATING_WORDS[wordIndex]}
+                        </motion.span>
+                    </AnimatePresence>
                 </motion.div>
 
                 {/* Awards Badge */}
@@ -74,19 +109,13 @@ export default function Hero() {
                     4.00 GPA · Frederic Barnes Waldron Best Student Award
                 </motion.div>
 
-                {/* CTAs */}
+                {/* CTA */}
                 <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4 mt-4">
-                    <Link
-                        href="/projects"
-                        className="px-7 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium tracking-wide shadow-lg shadow-zinc-900/10 hover:bg-zinc-700 hover:shadow-zinc-900/20 transition-all duration-300 hover:-translate-y-0.5"
-                    >
-                        View Projects
-                    </Link>
                     <a
                         href="/edmund_resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-7 py-3 rounded-full border border-zinc-300 text-zinc-700 text-sm font-medium tracking-wide bg-white/60 backdrop-blur-sm hover:border-zinc-900 hover:text-zinc-900 transition-all duration-300 hover:-translate-y-0.5"
+                        className="px-7 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium tracking-wide shadow-lg shadow-zinc-900/10 hover:bg-zinc-700 hover:shadow-zinc-900/20 transition-all duration-300 hover:-translate-y-0.5"
                     >
                         Download Résumé
                     </a>

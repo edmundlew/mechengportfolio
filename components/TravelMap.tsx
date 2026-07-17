@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography, Line, Marker, ZoomableGroup } from 'react-simple-maps';
 
 interface City {
     name: string;
@@ -19,6 +19,26 @@ interface TravelMapProps {
 }
 
 const GEO_URL = '/data/world-50m.json';
+
+// The journey so far: Kuching → London (2023), London → San Francisco (2025)
+const JOURNEY: { from: [number, number]; to: [number, number] }[] = [
+    { from: [110.35, 1.55], to: [-0.12, 51.5] },
+    { from: [-0.12, 51.5], to: [-122.42, 37.77] },
+];
+
+/** Simple house shape for the home marker, scaled by s. */
+function housePath(s: number) {
+    return [
+        `M 0 ${-s}`,
+        `L ${0.95 * s} ${-0.1 * s}`,
+        `L ${0.55 * s} ${-0.1 * s}`,
+        `L ${0.55 * s} ${0.85 * s}`,
+        `L ${-0.55 * s} ${0.85 * s}`,
+        `L ${-0.55 * s} ${-0.1 * s}`,
+        `L ${-0.95 * s} ${-0.1 * s}`,
+        'Z',
+    ].join(' ');
+}
 
 /**
  * Show a single month per visit: "December 2025 – January 2026" → "December 2025",
@@ -92,6 +112,23 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
                                 })
                             }
                         </Geographies>
+
+                        {/* Flight-path arcs of the journey */}
+                        <g className="flight-arc" aria-hidden>
+                            {JOURNEY.map((leg, i) => (
+                                <Line
+                                    key={i}
+                                    from={leg.from}
+                                    to={leg.to}
+                                    stroke="#0071e3"
+                                    strokeWidth={1.1 / Math.sqrt(zoom)}
+                                    strokeLinecap="round"
+                                    fill="none"
+                                    opacity={0.45}
+                                />
+                            ))}
+                        </g>
+
                         {cities.map((city) => (
                             <Marker
                                 key={city.name}
@@ -100,13 +137,24 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
                                 onMouseLeave={() => setHovered(null)}
                                 onClick={() => setSelected(selected?.name === city.name ? null : city)}
                             >
-                                <circle
-                                    r={(city.home ? dotRadius * 1.6 : dotRadius) * (selected?.name === city.name ? 1.5 : 1)}
-                                    fill={city.home ? '#10b981' : selected?.name === city.name ? '#005bb5' : '#0071e3'}
-                                    stroke="#ffffff"
-                                    strokeWidth={dotRadius * 0.35}
-                                    style={{ cursor: 'pointer' }}
-                                />
+                                {city.home ? (
+                                    <path
+                                        d={housePath(dotRadius * 2.4 * (selected?.name === city.name ? 1.4 : 1))}
+                                        fill="#18181b"
+                                        stroke="#ffffff"
+                                        strokeWidth={dotRadius * 0.4}
+                                        strokeLinejoin="round"
+                                        style={{ cursor: 'pointer' }}
+                                    />
+                                ) : (
+                                    <circle
+                                        r={dotRadius * (selected?.name === city.name ? 1.5 : 1)}
+                                        fill={selected?.name === city.name ? '#005bb5' : '#0071e3'}
+                                        stroke="#ffffff"
+                                        strokeWidth={dotRadius * 0.35}
+                                        style={{ cursor: 'pointer' }}
+                                    />
+                                )}
                             </Marker>
                         ))}
                     </ZoomableGroup>
@@ -116,10 +164,19 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
             {/* Legend */}
             <div className="flex items-center gap-5 mt-3 text-xs text-zinc-400">
                 <span className="inline-flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> Home
+                    <svg viewBox="-1.2 -1.2 2.4 2.4" className="w-2.5 h-2.5" aria-hidden>
+                        <path d={housePath(1)} fill="#18181b" />
+                    </svg>
+                    Home
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-[#0071e3]" /> Visited
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                    <svg viewBox="0 0 24 8" className="w-6 h-2" aria-hidden>
+                        <path d="M0,4 H24" stroke="#0071e3" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
+                    </svg>
+                    The journey
                 </span>
             </div>
 

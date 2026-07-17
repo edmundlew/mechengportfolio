@@ -10,6 +10,21 @@ const getLogoPath = (institution: string) => {
     return ""; // Fallback will be handled by Image or via empty string check
 };
 
+// Faint country/state flag per institution — traces the journey across countries
+const getFlagPath = (institution: string) => {
+    // UC Berkeley → United States
+    if (institution.includes("Berkeley")) return "/assets/education/flags/us.svg";
+    // UCL → United Kingdom
+    if (institution.includes("UCL") || institution.includes("University College London"))
+        return "/assets/education/flags/uk.svg";
+    // KYUEM → Malaysia
+    if (institution.includes("Kolej Yayasan UEM") || institution.includes("KYUEM"))
+        return "/assets/education/flags/malaysia.svg";
+    // Kuching High → Sarawak
+    if (institution.includes("Kuching")) return "/assets/education/flags/sarawak.svg";
+    return "";
+};
+
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 
@@ -33,6 +48,7 @@ export default async function EducationPage() {
                         <EducationCard
                             item={item}
                             logo={getLogoPath(item.institution)}
+                            flagSrc={getFlagPath(item.institution)}
                         />
                     </Reveal>
                 ))}

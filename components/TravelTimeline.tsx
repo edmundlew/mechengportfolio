@@ -3,20 +3,20 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export interface CountryEntry {
+export interface PlaceEntry {
     flag: string;
-    cities: string[];
+    city: string;
     country: string;
     month: string;
 }
 
-export interface CountryYearGroup {
+export interface PlaceYearGroup {
     year: string;
-    entries: CountryEntry[];
+    entries: PlaceEntry[];
 }
 
 interface TravelTimelineProps {
-    years: CountryYearGroup[];
+    years: PlaceYearGroup[];
 }
 
 export default function TravelTimeline({ years }: TravelTimelineProps) {
@@ -91,10 +91,12 @@ export default function TravelTimeline({ years }: TravelTimelineProps) {
                                             >
                                                 <p className="font-semibold text-zinc-800 text-sm md:text-base min-w-0">
                                                     <span className="mr-2">{entry.flag}</span>
-                                                    {entry.cities.join(', ')}
-                                                    <span className="text-zinc-400 font-normal">
-                                                        , {entry.country}
-                                                    </span>
+                                                    {entry.city}
+                                                    {entry.country && (
+                                                        <span className="text-zinc-400 font-normal">
+                                                            , {entry.country}
+                                                        </span>
+                                                    )}
                                                 </p>
                                                 <span className="font-mono text-xs text-zinc-400 uppercase tracking-tighter whitespace-nowrap shrink-0">
                                                     {entry.month}

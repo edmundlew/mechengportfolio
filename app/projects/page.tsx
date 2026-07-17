@@ -12,7 +12,7 @@ export default async function ProjectsPage() {
         <div className="min-h-screen pt-48 pb-20 px-6 max-w-5xl mx-auto overflow-hidden">
             <PageHeader
                 title="Projects"
-                description="Engineering challenges I've built — and the research I've written along the way."
+                description="Built, broken, rebuilt, then written up."
                 watermark="02"
                 accentWatermark="text-violet-100/70"
                 accentBorder="border-violet-200"
@@ -21,9 +21,9 @@ export default async function ProjectsPage() {
             {/* Technical Projects */}
             <section>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Technical Projects
+                    Things I&apos;ve Built
                 </h2>
-                <p className="text-sm text-zinc-400 mb-4">Drag or use the arrows to explore. Click a card for details.</p>
+                <p className="text-sm text-zinc-400 mb-4">Drag through the cards. Each one opens up.</p>
                 <div className="flex-1 flex items-center">
                     <ProjectsCarousel projects={projects} />
                 </div>
@@ -33,10 +33,10 @@ export default async function ProjectsPage() {
             {papers.length > 0 && (
                 <section className="mt-20">
                     <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                        Research &amp; Papers
+                        Things I&apos;ve Written
                     </h2>
                     <p className="text-sm text-zinc-400 mb-8">
-                        Academic work from UC Berkeley — click any paper to read the full PDF.
+                        Four papers from a year at Berkeley. Click one to read it in full.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {papers.map((paper: any, index: number) => (

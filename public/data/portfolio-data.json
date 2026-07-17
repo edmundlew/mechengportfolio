@@ -13,7 +13,7 @@
                 }
             ]
         },
-        "longDescription": "I grew up in Kuching, Sarawak, and now work between two of the world's best engineering schools, in London and Berkeley. I'm an MEng student at UCL on track for First Class Honours — winner of the Frederic Barnes Waldron Best Student Award — and just finished an exchange year at UC Berkeley with a 4.00 GPA. Along the way I've cooled photon detectors at Berkeley's FLOW Lab, built the ServoMag parachute ejection system that flew at the Spaceport America Cup, made 1kg of balsa carry a record 235N, and designed building services at Arup for London's museums. Home still matters: I founded the Sarawak Student Initiative to mentor students across my state.",
+        "longDescription": "I grew up in Kuching, a small city on the island of Borneo. As a kid I always dreamt of leaving home to explore beyond my horizons, and I've been fortunate enough to study mechanical engineering at two of the world's best universities. At UCL I'm on track for First Class Honours, and in 2025 I won the Frederic Barnes Waldron Best Student Award, given to the student with the highest year average across the whole university. I spent my third year on exchange at UC Berkeley and finished with a 4.00 GPA. Outside of the classroom, I spent that year researching photon detector cooling at Berkeley's FLOW Lab, exploring how nanoscale heat pumps can pull heat out of sensors that have to stay cold. Before that I designed the parachute ejection system for UCL Rocketry's Spaceport America Cup entry, and spent two years of coursework turning mathematics into working models, simulating everything from pandemics to the wobble of a footbridge. Closest to my heart is the Sarawak Student Initiative, which I started in 2021. Education opportunities in my home state are nowhere near equal, and I know how much difference one person's guidance can make. SSI exists so that every student in Sarawak, wherever they start from, gets a real chance to go out and see the world.",
         "mediaArray": [],
         "toolkit": [
             "MATLAB",
@@ -22,7 +22,12 @@
             "Finite Element Analysis",
             "Mathematical Modelling",
             "Rapid Prototyping"
-        ]
+        ],
+        "now": {
+            "location": "Miri, Sarawak",
+            "timezone": "Asia/Kuching",
+            "activity": "Working in OSSM"
+        }
     },
     "education": [
         {
@@ -128,6 +133,48 @@
             "reportUrl": "/papers/photon-detector-cooling.pdf"
         },
         {
+            "title": "UCL Rocketry",
+            "role": "Recovery Systems Lead",
+            "imageSrc": "/projects/rocket/genesis-2.jpg",
+            "technicalTags": [
+                "Fusion 360",
+                "Electromagnetics",
+                "Systems Engineering"
+            ],
+            "metrics": [
+                "1st Place (National Rocketry Championships 2024)",
+                "#1 UK/EU entrant (Spaceport America Cup 2025)"
+            ],
+            "longDescription": "Designed the ServoMag parachute ejection system, utilizing a servomotor and electromagnet for precise electronic actuation. Developed a dual-deployment recovery system with main and drogue parachutes, leading to a successful recovery and top-ranking at the Spaceport America Cup.",
+            "mediaArray": [
+                "/projects/rocket/genesis-1.jpg",
+                "/projects/rocket/murphy.jpg",
+                "/projects/rocket/flight.mp4"
+            ]
+        },
+        {
+            "title": "UCL Mechathon",
+            "role": "Aerodynamics & Design Lead",
+            "imageSrc": "/projects/mechathon/glider-2.jpg",
+            "technicalTags": [
+                "Fusion 360",
+                "Aerodynamics",
+                "Laser Cutting",
+                "3D Printing"
+            ],
+            "metrics": [
+                "1st Runner Up (Top 2 out of 15 teams)"
+            ],
+            "longDescription": "Collaborated in a five-member team to design and manufacture an elastic-band-powered aircraft within a 48-hour development cycle. Utilized Fusion 360 to model an aerodynamically optimized glider and employed laser cutting and 3D printing to achieve first runner-up status.",
+            "mediaArray": [
+                "/projects/mechathon/glider-2.jpg",
+                "/projects/mechathon/glider-1.jpg",
+                "/projects/mechathon/flight-2.mp4",
+                "/projects/mechathon/flight-3.mp4"
+            ],
+            "videoSrc": "/projects/mechathon/flight-1.mp4"
+        },
+        {
             "title": "Mathematical Modelling",
             "subProjects": [
                 {
@@ -157,28 +204,10 @@
             "metrics": [],
             "longDescription": "A two-year arc of modelling coursework at UCL (ENGF0003 & ENGF0004), turning analytical mathematics into working MATLAB simulations of real systems. The work spans fitting logistic growth models to two centuries of population data, simulating epidemics with SIR compartmental models, predicting pedestrian-induced footbridge vibrations with Fourier series and finite-difference schemes, and compressing images via eigendecomposition and SVD.",
             "mediaArray": [
-                "/projects/math-modelling/bridge-sensitivity.jpg",
-                "/projects/math-modelling/sir-scenarios.jpg"
-            ]
-        },
-        {
-            "title": "UCL Rocketry",
-            "role": "Recovery Systems Lead",
-            "imageSrc": "/projects/rocket/genesis-2.jpg",
-            "technicalTags": [
-                "Fusion 360",
-                "Electromagnetics",
-                "Systems Engineering"
-            ],
-            "metrics": [
-                "1st Place (National Rocketry Championships 2024)",
-                "#1 UK/EU entrant (Spaceport America Cup 2025)"
-            ],
-            "longDescription": "Designed the ServoMag parachute ejection system, utilizing a servomotor and electromagnet for precise electronic actuation. Developed a dual-deployment recovery system with main and drogue parachutes, leading to a successful recovery and top-ranking at the Spaceport America Cup.",
-            "mediaArray": [
-                "/projects/rocket/genesis-1.jpg",
-                "/projects/rocket/murphy.jpg",
-                "/projects/rocket/flight.mp4"
+                "/projects/math-modelling/population-logistic.jpg",
+                "/projects/math-modelling/sir-dynamics.jpg",
+                "/projects/math-modelling/bridge-3d.jpg",
+                "/projects/math-modelling/svd-compression.jpg"
             ]
         },
         {
@@ -198,28 +227,6 @@
                 "/projects/pylon/pylon-1.jpg",
                 "/projects/pylon/pylon-4.jpg"
             ]
-        },
-        {
-            "title": "UCL Mechathon",
-            "role": "Aerodynamics & Design Lead",
-            "imageSrc": "/projects/mechathon/glider-2.jpg",
-            "technicalTags": [
-                "Fusion 360",
-                "Aerodynamics",
-                "Laser Cutting",
-                "3D Printing"
-            ],
-            "metrics": [
-                "1st Runner Up (Top 2 out of 15 teams)"
-            ],
-            "longDescription": "Collaborated in a five-member team to design and manufacture an elastic-band-powered aircraft within a 48-hour development cycle. Utilized Fusion 360 to model an aerodynamically optimized glider and employed laser cutting and 3D printing to achieve first runner-up status.",
-            "mediaArray": [
-                "/projects/mechathon/glider-2.jpg",
-                "/projects/mechathon/glider-1.jpg",
-                "/projects/mechathon/flight-2.mp4",
-                "/projects/mechathon/flight-3.mp4"
-            ],
-            "videoSrc": "/projects/mechathon/flight-1.mp4"
         }
     ],
     "professionalAndLeadership": [

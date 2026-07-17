@@ -38,10 +38,10 @@ function getTravels() {
 }
 
 /**
- * Reshape the trip-based travel data into country visits:
- * each trip is split per country — flag, cities, country name, month only.
+ * Reshape the trip-based travel data into individual place visits:
+ * every stop becomes its own row — flag, "City, Country", month only.
  */
-function buildCountryTimeline(travels: any) {
+function buildPlaceTimeline(travels: any) {
     const cityIndex: Record<string, { country: string; flag: string }> = {};
     travels.cities.forEach((c: any) => {
         cityIndex[c.name] = { country: c.country, flag: c.flag || "" };
@@ -50,28 +50,23 @@ function buildCountryTimeline(travels: any) {
     return travels.years.map((y: any) => ({
         year: y.year,
         entries: y.trips.flatMap((trip: any) => {
-            // Group this trip's stops by country, preserving stop order
-            const groups: { country: string; flag: string; cities: string[] }[] = [];
-            trip.stops.forEach((stop: string) => {
-                const info = cityIndex[stop] || {
-                    country: "",
-                    flag: trip.flags?.[0] || "",
-                };
-                const existing = groups.find((g) => g.country === info.country);
-                if (existing) existing.cities.push(stop);
-                else groups.push({ country: info.country, flag: info.flag, cities: [stop] });
-            });
             // Single month only: "March–April 2025" → "March", "December 2025 – January 2026" → "December"
             const monthMatch = trip.period.match(
                 /January|February|March|April|May|June|July|August|September|October|November|December/
             );
             const month = monthMatch ? monthMatch[0] : trip.period.replace(/\s*\d{4}$/, "");
-            return groups.map((g) => ({
-                flag: g.flag,
-                cities: g.cities,
-                country: g.country,
-                month,
-            }));
+            return trip.stops.map((stop: string) => {
+                const info = cityIndex[stop] || {
+                    country: "",
+                    flag: trip.flags?.[0] || "",
+                };
+                return {
+                    flag: info.flag,
+                    city: stop,
+                    country: info.country,
+                    month,
+                };
+            });
         }),
     }));
 }
@@ -85,7 +80,7 @@ export default function InterestsPage() {
         <div className="min-h-screen pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
                 title="Interests"
-                description="Away from the workbench — the world through my camera, the map of everywhere it's taken me, and a few stories from along the way."
+                description="Everything that doesn't fit on a CV."
                 watermark="04"
                 accentWatermark="text-amber-100/70"
                 accentBorder="border-amber-200"
@@ -94,10 +89,10 @@ export default function InterestsPage() {
             {/* Photography */}
             <section>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Photography
+                    Through the Lens
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    Shot on the road — click any photo to view it full screen.
+                    Favourites from the camera roll. Click one to see it properly.
                 </p>
                 <PhotoGallery photos={photos} />
             </section>
@@ -106,17 +101,17 @@ export default function InterestsPage() {
             <section className="mt-20">
                 <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Travels
+                    Where I&apos;ve Been
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    From Kuching to the world — every dot is a story.
+                    Started in Kuching. It got out of hand.
                 </p>
 
                 <TravelMap cities={travels.cities} summary={travels.summary} />
                 </Reveal>
 
-                {/* Timeline — collapsible by year, newest first, grouped by country */}
-                <TravelTimeline years={buildCountryTimeline(travels)} />
+                {/* Timeline — collapsible by year, newest first, one row per place */}
+                <TravelTimeline years={buildPlaceTimeline(travels)} />
             </section>
 
             {/* Blog */}
@@ -126,7 +121,7 @@ export default function InterestsPage() {
                     Stories
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    Notes and stories from along the way.
+                    Occasionally I write things down.
                 </p>
 
                 {posts.length === 0 && (

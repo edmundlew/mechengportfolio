@@ -18,9 +18,11 @@ interface EducationItem {
 interface EducationCardProps {
     item: EducationItem;
     logo: string;
+    /** Path to the country/state flag, shown as a faint image on the card's right */
+    flagSrc?: string;
 }
 
-export default function EducationCard({ item, logo }: EducationCardProps) {
+export default function EducationCard({ item, logo, flagSrc }: EducationCardProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [activeCertIndex, setActiveCertIndex] = useState<number | null>(null);
 
@@ -41,13 +43,21 @@ export default function EducationCard({ item, logo }: EducationCardProps) {
             className={`relative isolate border border-zinc-200/50 rounded-2xl p-6 bg-white cursor-pointer transition-shadow duration-300 overflow-hidden w-full ${isOpen ? 'shadow-xl ring-1 ring-zinc-900/5' : 'hover:shadow-xl shadow-sm'
                 }`}
         >
-            {/* Ghost initial watermark */}
-            <span
-                aria-hidden
-                className="absolute -top-6 -right-2 -z-10 text-[7rem] font-bold leading-none text-zinc-50 select-none pointer-events-none tracking-tighter"
-            >
-                {item.institution.replace(/^(University College|University of|Kolej Yayasan)\s*/i, '').charAt(0)}
-            </span>
+            {/* Faint country flag — fades in from the right edge */}
+            {flagSrc && (
+                <div
+                    aria-hidden
+                    className="absolute inset-y-0 right-0 w-44 md:w-64 -z-10 pointer-events-none"
+                    style={{
+                        backgroundImage: `url(${flagSrc})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center right',
+                        opacity: 0.13,
+                        maskImage: 'linear-gradient(to left, black 30%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 100%)',
+                    }}
+                />
+            )}
             <motion.div layout="position" className="flex items-start gap-4 md:gap-6">
                 {/* Logo */}
                 <div className="shrink-0 relative w-16 h-16 bg-zinc-50 rounded-xl border border-zinc-100 flex items-center justify-center p-2">

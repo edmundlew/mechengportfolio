@@ -14,11 +14,29 @@ html {
 
 body {
   background-color: var(--background);
+  /* Faint graph-paper grid — engineering drawing feel, barely-there */
+  background-image:
+    linear-gradient(to right, rgba(29, 29, 31, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(29, 29, 31, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: clip;
   width: 100%;
+}
+
+/* Animated dashed flight paths on the travel map */
+.flight-arc path,
+path.flight-arc {
+  stroke-dasharray: 3 5;
+  animation: flight-dash 60s linear infinite;
+}
+
+@keyframes flight-dash {
+  to {
+    stroke-dashoffset: -800;
+  }
 }
 
 /* Hide scrollbars on horizontally scrollable pill nav */

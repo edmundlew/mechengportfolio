@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import ScrollMascot from "@/components/ScrollMascot";
 import "./globals.css";
 import "./math-styles"; // Import global math styles
 
@@ -44,7 +45,8 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${inter.className} ${fraunces.variable} antialiased selection:bg-blue-100 selection:text-blue-900`}>
                 <Navbar />
-                <main className="min-h-screen flex flex-col bg-background text-foreground pt-20">
+                <ScrollMascot />
+                <main className="min-h-screen flex flex-col text-foreground pt-20">
                     {children}
                 </main>
             </body>

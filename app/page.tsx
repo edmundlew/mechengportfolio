@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getPortfolioData } from "@/lib/data";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
+import NowCard from "@/components/NowCard";
 
 const exploreLinks = [
     {
@@ -39,7 +40,7 @@ export default async function Home() {
     const data = await getPortfolioData();
 
     return (
-        <div className="flex flex-col min-h-screen bg-[#FBFBFD]">
+        <div className="flex flex-col min-h-screen">
             {/* Client-Side Animated Hero */}
             <Hero />
 
@@ -47,7 +48,7 @@ export default async function Home() {
             <section className="px-6 pb-20 max-w-4xl mx-auto w-full">
                 <Reveal>
                 <div className="bg-white/50 backdrop-blur-sm border border-zinc-100 p-8 md:p-10 rounded-3xl shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-[260px,1fr] gap-8 md:gap-10 items-start">
+                    <div className="grid grid-cols-1 md:grid-cols-[260px,1fr] gap-8 md:gap-10 items-center">
                         {/* Portrait — natural 2:3 aspect ratio, never cropped */}
                         <div className="relative w-48 md:w-full max-w-[260px] mx-auto md:mx-0 aspect-[2/3] rounded-2xl overflow-hidden border border-zinc-100 shadow-md bg-zinc-50">
                             <Image
@@ -121,6 +122,13 @@ export default async function Home() {
 
             {/* Footer */}
             <footer className="py-12 text-center border-t border-zinc-100/50">
+                {data.personalInfo.now && (
+                    <NowCard
+                        location={data.personalInfo.now.location}
+                        timezone={data.personalInfo.now.timezone}
+                        activity={data.personalInfo.now.activity}
+                    />
+                )}
                 <div className="flex items-center justify-center gap-6 mb-4 text-sm">
                     <a
                         href="https://www.linkedin.com/in/edmund-lew"
