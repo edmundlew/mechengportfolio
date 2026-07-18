@@ -46,7 +46,7 @@ export default function RootLayout({
             <body className={`${inter.className} ${fraunces.variable} antialiased selection:bg-blue-100 selection:text-blue-900`}>
                 <Navbar />
                 <ScrollMascot />
-                <main className="min-h-screen flex flex-col text-foreground pt-20">
+                <main className="min-h-screen flex flex-col text-foreground pt-20 overflow-x-clip max-w-[100vw]">
                     {children}
                 </main>
             </body>

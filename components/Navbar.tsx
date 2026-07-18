@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[9999] w-max max-w-[calc(100vw-1.5rem)]">
-      <div className="relative flex items-center gap-0.5 sm:gap-4 px-2 sm:px-6 py-2 sm:py-2.5 bg-white/80 backdrop-blur-xl border border-zinc-200/50 shadow-2xl shadow-zinc-900/5 rounded-full overflow-x-auto no-scrollbar">
+      <div className="relative flex items-center gap-1 sm:gap-4 px-2.5 sm:px-6 py-2.5 bg-white/80 backdrop-blur-xl border border-zinc-200/50 shadow-2xl shadow-zinc-900/5 rounded-full overflow-x-auto no-scrollbar">
         {/* Logo — hidden on very small screens to keep the pill compact */}
         <Link
           href="/"
@@ -80,7 +80,7 @@ export default function Navbar() {
                 if (el) linkRefs.current.set(item.path, el);
                 else linkRefs.current.delete(item.path);
               }}
-              className={`relative px-2 sm:px-4 py-1.5 z-10 text-[0.7rem] sm:text-sm whitespace-nowrap transition-colors duration-300 ${
+              className={`relative px-2 sm:px-4 py-2 sm:py-1.5 z-10 text-[0.72rem] sm:text-sm whitespace-nowrap transition-colors duration-300 ${
                 isActive ? 'text-white font-medium' : 'text-zinc-500 hover:text-zinc-900'
               }`}
             >

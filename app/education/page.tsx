@@ -33,7 +33,7 @@ export default async function EducationPage() {
     const educationArr = data.education || [];
 
     return (
-        <div className="min-h-screen w-full pt-48 pb-20 px-6 max-w-5xl mx-auto">
+        <div className="min-h-screen w-full pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
                 title="Education"
                 description="A timeline of rigorous training in mechanical principles, ranging from foundational A-Levels to advanced research at global institutions."

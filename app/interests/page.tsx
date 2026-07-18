@@ -77,7 +77,7 @@ export default function InterestsPage() {
     const posts = getBlogPosts();
 
     return (
-        <div className="min-h-screen pt-48 pb-20 px-6 max-w-5xl mx-auto">
+        <div className="min-h-screen pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
                 title="Interests"
                 description="Everything that doesn't fit on a CV."
@@ -98,7 +98,7 @@ export default function InterestsPage() {
             </section>
 
             {/* Travels */}
-            <section className="mt-20">
+            <section className="mt-14 md:mt-20">
                 <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                     Where I&apos;ve Been
@@ -115,7 +115,7 @@ export default function InterestsPage() {
             </section>
 
             {/* Blog */}
-            <section className="mt-20">
+            <section className="mt-14 md:mt-20">
                 <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                     Stories

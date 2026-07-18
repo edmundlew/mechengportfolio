@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ComposableMap, Geographies, Geography, Line, Marker, ZoomableGroup } from 'react-simple-maps';
 
 interface City {
@@ -57,11 +57,21 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
     const [selected, setSelected] = useState<City | null>(null);
     const [mouse, setMouse] = useState({ x: 0, y: 0 });
     const [zoom, setZoom] = useState(1);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsSmallScreen(window.innerWidth < 768);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
+    }, []);
 
     const visitedIso = useMemo(() => new Set(cities.map((c) => Number(c.iso))), [cities]);
 
-    // Shrink markers as the user zooms in so dense clusters (UK, Europe) stay readable
-    const dotRadius = Math.max(1.1, 3 / Math.sqrt(zoom));
+    // Bigger touch targets on phones; shrink markers as the user zooms in
+    // so dense clusters (UK, Europe) stay readable
+    const baseRadius = isSmallScreen ? 4.4 : 3;
+    const dotRadius = Math.max(1.1, baseRadius / Math.sqrt(zoom));
 
     return (
         <div
@@ -82,7 +92,7 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
                 <span className="hidden sm:inline text-zinc-400 text-xs">Scroll to zoom · drag to pan · hover a dot</span>
             </div>
 
-            <div className="rounded-3xl border border-zinc-100 bg-white shadow-sm overflow-hidden">
+            <div className="travel-map -mx-3 sm:mx-0 rounded-none sm:rounded-3xl border-y sm:border border-zinc-100 bg-white shadow-sm overflow-hidden">
                 <ComposableMap projection="geoEqualEarth" projectionConfig={{ scale: 160 }} style={{ width: '100%', height: 'auto' }}>
                     <ZoomableGroup
                         center={[15, 20]}
@@ -185,7 +195,7 @@ export default function TravelMap({ cities, summary }: TravelMapProps) {
                 <div
                     className="absolute z-20 pointer-events-none bg-white/95 backdrop-blur-sm border border-zinc-200 rounded-xl shadow-xl px-3.5 py-2"
                     style={{
-                        left: Math.min(mouse.x + 14, 9999),
+                        left: `min(${mouse.x + 14}px, calc(100% - 150px))`,
                         top: mouse.y + 14,
                     }}
                 >

@@ -87,6 +87,22 @@ path.flight-arc {
   background: #a1a1aa;
 }
 
+/* Long words/URLs never force horizontal overflow */
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+span {
+  overflow-wrap: break-word;
+}
+
+/* Travel map: let one finger scroll the page; pinch still zooms the map */
+.travel-map svg {
+  touch-action: pan-y !important;
+}
+
 /* Visible focus for keyboard users, invisible for mouse users */
 :focus-visible {
   outline: 2px solid #0071e3;

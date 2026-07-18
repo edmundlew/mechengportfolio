@@ -25,7 +25,7 @@ export default function BlogPostPage({
     if (!post) notFound();
 
     return (
-        <article className="min-h-screen pt-40 pb-24 px-6 max-w-3xl mx-auto">
+        <article className="min-h-screen pt-28 md:pt-40 pb-24 px-6 max-w-3xl mx-auto">
             {/* Back link */}
             <Link
                 href="/interests"

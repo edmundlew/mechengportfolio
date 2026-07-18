@@ -16,7 +16,7 @@ export default async function ExperiencePage() {
     const experience = data.professionalAndLeadership || [];
 
     return (
-        <div className="min-h-screen pt-48 pb-20 px-6 max-w-5xl mx-auto">
+        <div className="min-h-screen pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
                 title="Experience"
                 description="Leadership roles and engineering internships that have shaped my technical and managerial capabilities."

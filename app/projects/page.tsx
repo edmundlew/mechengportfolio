@@ -9,7 +9,7 @@ export default async function ProjectsPage() {
     const papers = data.papers || [];
 
     return (
-        <div className="min-h-screen pt-48 pb-20 px-6 max-w-5xl mx-auto overflow-hidden">
+        <div className="min-h-screen pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto overflow-hidden">
             <PageHeader
                 title="Projects"
                 description="Built, broken, rebuilt, then written up."
@@ -31,7 +31,7 @@ export default async function ProjectsPage() {
 
             {/* Research & Papers */}
             {papers.length > 0 && (
-                <section className="mt-20">
+                <section className="mt-14 md:mt-20">
                     <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                         Things I&apos;ve Written
                     </h2>

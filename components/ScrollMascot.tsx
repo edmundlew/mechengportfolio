@@ -10,7 +10,7 @@ import { motion, useScroll, useSpring, useTransform, MotionValue } from 'framer-
  *   /projects    gear spins with scroll
  *   /experience  F1 car drives along the bottom
  *   /interests   paper plane glides up
- * Purely decorative — pointer-events off, hidden on very small screens.
+ * Purely decorative — pointer-events off, slightly smaller on phones.
  */
 export default function ScrollMascot() {
     const pathname = usePathname();
@@ -34,7 +34,7 @@ function Rocket() {
     const y = useTransform(smooth, [0, 1], ['0vh', '-72vh']);
 
     return (
-        <div aria-hidden className="fixed right-2 md:right-5 bottom-[8vh] z-40 pointer-events-none hidden sm:block">
+        <div aria-hidden className="fixed right-2 md:right-5 bottom-[8vh] z-40 pointer-events-none scale-[0.8] sm:scale-100 origin-bottom-right">
             <motion.div style={{ y }}>
                 <svg width="20" height="46" viewBox="0 0 20 46" fill="none">
                     <path
@@ -64,7 +64,7 @@ function GradCap() {
     const y = useTransform(smooth, [0, 1], ['0vh', '-72vh']);
 
     return (
-        <div aria-hidden className="fixed right-2 md:right-5 bottom-[8vh] z-40 pointer-events-none hidden sm:block">
+        <div aria-hidden className="fixed right-2 md:right-5 bottom-[8vh] z-40 pointer-events-none scale-[0.8] sm:scale-100 origin-bottom-right">
             <motion.div
                 style={{ y }}
                 animate={{ rotate: [-5, 5, -5] }}
@@ -98,7 +98,7 @@ function Gear() {
     const rotate = useTransform(smooth, [0, 1], [0, 540]);
 
     return (
-        <div aria-hidden className="fixed right-2 md:right-5 bottom-[10vh] z-40 pointer-events-none hidden sm:block">
+        <div aria-hidden className="fixed right-2 md:right-5 bottom-[10vh] z-40 pointer-events-none scale-[0.8] sm:scale-100 origin-bottom-right">
             <motion.svg width="34" height="34" viewBox="-18 -18 36 36" style={{ rotate }}>
                 {/* Teeth */}
                 {Array.from({ length: 8 }).map((_, i) => (
@@ -134,7 +134,7 @@ function F1Car() {
     };
 
     return (
-        <div aria-hidden className="fixed left-0 bottom-1 z-40 pointer-events-none hidden sm:block w-full">
+        <div aria-hidden className="fixed left-0 bottom-1 z-40 pointer-events-none w-full scale-[0.8] sm:scale-100 origin-bottom-left">
             <motion.div style={{ x }} className="w-fit">
                 <svg width="46" height="18" viewBox="0 0 46 18" fill="none">
                     {/* Rear wing */}
@@ -167,7 +167,7 @@ function PaperPlane() {
     const x = useTransform(smooth, [0, 0.5, 1], ['0px', '-10px', '0px']);
 
     return (
-        <div aria-hidden className="fixed right-3 md:right-6 bottom-[8vh] z-40 pointer-events-none hidden sm:block">
+        <div aria-hidden className="fixed right-3 md:right-6 bottom-[8vh] z-40 pointer-events-none scale-[0.8] sm:scale-100 origin-bottom-right">
             <motion.div style={{ y, x, rotate: -8 }}>
                 <svg width="34" height="52" viewBox="0 0 34 52" fill="none">
                     {/* Plane */}
