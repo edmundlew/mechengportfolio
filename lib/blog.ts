@@ -85,7 +85,7 @@ export function getBlogPosts(): BlogPostMeta[] {
     if (!fs.existsSync(BLOG_DIR)) return [];
     return fs
         .readdirSync(BLOG_DIR)
-        .filter((f) => f.toLowerCase().endsWith(".md"))
+        .filter((f) => f.toLowerCase().endsWith(".md") && !f.startsWith("_"))
         .map(readPost)
         .sort((a, b) => (a.date < b.date ? 1 : -1))
         .map(({ html, ...meta }) => meta);

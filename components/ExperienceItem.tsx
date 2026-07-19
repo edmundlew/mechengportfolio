@@ -52,6 +52,20 @@ export default function ExperienceItem({ role, index, logo }: ExperienceItemProp
                     </div>
                 )}
 
+                        {/* Mini milestone timeline */}
+                        {role.milestones && role.milestones.length > 0 && (
+                            <div className="mt-4 space-y-2.5 border-l-2 border-zinc-100 pl-4 max-w-2xl">
+                                {role.milestones.map((m: any) => (
+                                    <div key={m.year} className="text-sm leading-relaxed">
+                                        <span className="font-mono text-xs font-semibold text-zinc-400 mr-2">
+                                            {m.year}
+                                        </span>
+                                        <span className="text-zinc-600">{m.text}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
                         {role.skillsAcquired && role.skillsAcquired.length > 0 && (
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {role.skillsAcquired.map((skill: string, i: number) => (

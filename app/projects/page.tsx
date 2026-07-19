@@ -23,7 +23,7 @@ export default async function ProjectsPage() {
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
                     Things I&apos;ve Built
                 </h2>
-                <p className="text-sm text-zinc-400 mb-4">Drag through the cards. Each one opens up.</p>
+                <p className="text-sm text-zinc-400 mb-4">Tap on any card for more details.</p>
                 <div className="flex-1 flex items-center">
                     <ProjectsCarousel projects={projects} />
                 </div>
@@ -36,7 +36,7 @@ export default async function ProjectsPage() {
                         Things I&apos;ve Written
                     </h2>
                     <p className="text-sm text-zinc-400 mb-8">
-                        Four papers from a year at Berkeley. Click one to read it in full.
+                        Putting pen to paper.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {papers.map((paper: any, index: number) => (

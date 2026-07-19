@@ -13,7 +13,7 @@
                 }
             ]
         },
-        "longDescription": "I grew up in Kuching, a small city on the island of Borneo. As a kid I always dreamt of leaving home to explore beyond my horizons, and I've been fortunate enough to study mechanical engineering at two of the world's best universities. At UCL I'm on track for First Class Honours, and in 2025 I won the Frederic Barnes Waldron Best Student Award, given to the student with the highest year average across the whole university. I spent my third year on exchange at UC Berkeley and finished with a 4.00 GPA. Outside of the classroom, I spent that year researching photon detector cooling at Berkeley's FLOW Lab, exploring how nanoscale heat pumps can pull heat out of sensors that have to stay cold. Before that I designed the parachute ejection system for UCL Rocketry's Spaceport America Cup entry, and spent two years of coursework turning mathematics into working models, simulating everything from pandemics to the wobble of a footbridge. Closest to my heart is the Sarawak Student Initiative, which I started in 2021. Education opportunities in my home state are nowhere near equal, and I know how much difference one person's guidance can make. SSI exists so that every student in Sarawak, wherever they start from, gets a real chance to go out and see the world.",
+        "longDescription": "I grew up in Kuching, a small city on the island of Borneo. As a kid I always dreamt of leaving home to explore beyond my horizons, and I've been fortunate enough to study mechanical engineering at two of the world's best universities. At UCL I'm on track for First Class Honours, and in 2025 I won the Frederic Barnes Waldron Best Student Award, given to the student with the highest year average across the whole university. I spent my third year on exchange at UC Berkeley and finished with a 4.00 GPA. Outside of the classroom, I spent a year researching photon detector cooling at Berkeley's FLOW Lab, and wrote a paper under Prof. Liwei Lin studying the use of nanowires in solid-state thermoelectric cooling. On the competitive side, I was the recovery systems lead for UCL Rocketry's entries at the Spaceport America Cup (SAC) 2025 and the National Rocketry Championship (NRC) 2024. Closest to my heart is the Sarawak Student Initiative, which I started in 2021. Education opportunities in my home state are nowhere near equal, and I know how much difference one person's guidance can make. SSI exists so that every student in Sarawak, wherever they start from, gets a real chance to go out and see the world.",
         "mediaArray": [],
         "toolkit": [
             "MATLAB",
@@ -231,6 +231,14 @@
     ],
     "professionalAndLeadership": [
         {
+            "organization": "Shell Sarawak Berhad (SSB)",
+            "role": "Mechanical, Materials and Integrity Intern",
+            "dates": "June 2026 – September 2026",
+            "skillsAcquired": [],
+            "longDescription": "",
+            "mediaArray": []
+        },
+        {
             "organization": "Ove Arup & Partners (London, UK)",
             "role": "Mechanical Engineering Intern",
             "dates": "June 2025 – July 2025",
@@ -254,8 +262,26 @@
                 "Public Speaking",
                 "Notion"
             ],
-            "longDescription": "Founded an initiative to bridge the educational resource gap for secondary students in Sarawak. Orchestrated flagship education roadshows across five cities—Kuching, Miri, Bintulu, Sibu, and Kota Samarahan—and managed scholarship talks attracting over 100 participants. Collaborated with entities such as Sarawak Energy Berhad and Yayasan Hasanah to deliver workshops and developed a centralized scholarship resource via Notion.",
-            "mediaArray": []
+            "longDescription": "I started SSI at the end of 2021 to show promising young Sarawakians what's possible after secondary school, and how to get there through the scholarships, loans and sponsorships many never hear about. What began as a central hub for post-secondary pathways and financial aid applications has grown, through years of grassroots work, into a youth organisation focused on access, advocacy and equality for every Sarawakian student.",
+            "mediaArray": [],
+            "milestones": [
+                {
+                    "year": "2022",
+                    "text": "One-week Zoom webinar with a speaker lineup spanning scholarships and pre-university pathways."
+                },
+                {
+                    "year": "2023",
+                    "text": "Sarawak Education Outreach Roadshow in Kuching, Sibu, Miri and Bintulu."
+                },
+                {
+                    "year": "2024",
+                    "text": "Roadshow in Kuching, Kota Samarahan and Miri, providing transport so rural schools could attend. Rural Outreach Roadshow at MRSM Betong."
+                },
+                {
+                    "year": "2025",
+                    "text": "Roadshow in Kuching, Sibu and Bintulu. Officially registered as a youth organisation (Kelab Belia) under the Ministry of Youth and Sports Malaysia — PPBM: KT17276/13/25."
+                }
+            ]
         },
         {
             "organization": "Boys’ Brigade in Malaysia",

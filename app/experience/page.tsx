@@ -5,6 +5,7 @@ import PageHeader from "@/components/PageHeader";
 
 // Organization logos (files in public/assets/experience/)
 const getLogoPath = (organization: string) => {
+    if (organization.includes("Shell")) return "/assets/experience/shell.png";
     if (organization.includes("Arup")) return "/assets/experience/arup.png";
     if (organization.includes("Sarawak Student Initiative")) return "/assets/experience/ssi.png";
     if (organization.includes("Boys")) return "/assets/experience/boys-brigade.png";

@@ -36,7 +36,7 @@ export default async function EducationPage() {
         <div className="min-h-screen w-full pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
                 title="Education"
-                description="A timeline of rigorous training in mechanical principles, ranging from foundational A-Levels to advanced research at global institutions."
+                description="From Borneo, to Berkeley and Britain."
                 watermark="01"
                 accentWatermark="text-sky-100/70"
                 accentBorder="border-sky-200"
