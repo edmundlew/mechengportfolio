@@ -232,16 +232,38 @@
     "professionalAndLeadership": [
         {
             "organization": "Shell Sarawak Berhad (SSB)",
-            "role": "Mechanical, Materials and Integrity Intern",
+            "role": "Mechanical, Materials & Integrity Intern",
             "dates": "June 2026 – September 2026",
-            "skillsAcquired": [],
-            "longDescription": "",
+            "location": "Miri, Malaysia",
+            "longDescription": "I spent the summer in Miri with the Mechanical, Materials and Integrity team, building data tools that help engineers keep corrosion in check across Shell's Sarawak fields.",
+            "highlights": [
+                "Built a Corrosion Inhibitor (CI) daily monitoring tool that replaced a manual reporting routine, saving engineers about 10 hours a week, plus SCIM, a Power BI dashboard that shows fleet-wide CI performance at a glance.",
+                "Developed ADEPT (Adaptive Data Estimation with Predictive Training), a machine learning model that uses Integrity Operating Window (IOW) data to optimise CI target dosages across 15 Sarawakian fields.",
+                "Delivered the MMI-PC IOW dashboard with the Process Chemistry team, bringing sampled IOW data into one shared view for both teams.",
+                "Supported Risk-Based Inspection by reconciling five years of piping inspection reports against the piping masterlists, aligning CMLs to a new naming convention and converting 70 long-term composite repair records.",
+                "Presented the CI tool at the Virtual Mechanical Engineering Conference (VMEC) 2026 and to the SCL Leadership Team, and wrote the documentation the team needs to run and extend all three tools after handover."
+            ],
+            "skillsAcquired": [
+                "Power BI",
+                "Machine Learning",
+                "Data Automation",
+                "Corrosion Management",
+                "Risk-Based Inspection"
+            ],
             "mediaArray": []
         },
         {
-            "organization": "Ove Arup & Partners (London, UK)",
-            "role": "Mechanical Engineering Intern",
+            "organization": "Ove Arup & Partners Limited",
+            "role": "Intern",
             "dates": "June 2025 – July 2025",
+            "location": "London, United Kingdom",
+            "longDescription": "Two months in Arup's London office, on the project team for a specialist plant collection and research facility, two prominent London museums and a premium lab space.",
+            "highlights": [
+                "Designed condensate routing options for Mechanical Ventilation Heat Recovery (MVHR) units in Dalux.",
+                "Ran pressure duct calculations for MVHR intake and extract air to size ductwork in BIM and Revit.",
+                "Scheduled areas on updated architect floor plans in Bluebeam Revu, classifying rooms by type, conditioning strategy and AHU service for other engineers' calculations.",
+                "Carried out ventilation and louvre sizing calculations, and embodied carbon calculations for Fan Coil Unit (FCU) servicing options using Arup's in-house workflow tool."
+            ],
             "skillsAcquired": [
                 "BIM",
                 "Revit",
@@ -249,7 +271,6 @@
                 "Dalux",
                 "Embodied Carbon Calculation"
             ],
-            "longDescription": "Contributed to high-profile projects including a specialist research facility and two prominent London museums. Designed condensate routing for MVHR units using Dalux and conducted pressure duct calculations and sizing within BIM and Revit environments. Performed area scheduling and AHU service classification in Bluebeam Revu, and utilized Arup’s in-house tools for embodied carbon analysis of FCU servicing options.",
             "mediaArray": []
         },
         {
@@ -267,7 +288,7 @@
             "milestones": [
                 {
                     "year": "2022",
-                    "text": "One-week Zoom webinar with a speaker lineup spanning scholarships and pre-university pathways."
+                    "text": "A week of online scholarship talks with speakers from different scholarships and pre-university pathways, drawing over 100 participants."
                 },
                 {
                     "year": "2023",
@@ -281,19 +302,20 @@
                     "year": "2025",
                     "text": "Roadshow in Kuching, Sibu and Bintulu. Officially registered as a youth organisation (Kelab Belia) under the Ministry of Youth and Sports Malaysia — PPBM: KT17276/13/25."
                 }
-            ]
+            ],
+            "location": "Sarawak, Malaysia"
         },
         {
             "organization": "Boys’ Brigade in Malaysia",
-            "role": "Sergeant, Band Major, and NCO Council Chairman",
+            "role": "Sergeant, Band Major and NCO Council Chairman",
             "dates": "January 2011 – September 2023",
+            "longDescription": "Twelve years in the Boys' Brigade, from weekly parades to leading the council. I organised weekly meetings with drill, camping, first aid and cooking, ran band training and led the percussion, woodwind and brass sections at performances, and as NCO Council Chairman oversaw our Band, Drill, Fun and Leadership Camps.",
             "skillsAcquired": [
                 "Team Leadership",
                 "Project Coordination",
                 "Drill Instruction",
                 "Musical Direction"
             ],
-            "longDescription": "Over a 12-year tenure, I directed weekly parade meetings involving drill, first aid, and camping activities. As Band Major, I led the percussion, woodwind, and brass sections for performances and oversaw the planning and execution of numerous leadership and musical camps.",
             "mediaArray": []
         }
     ],

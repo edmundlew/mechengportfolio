@@ -37,20 +37,39 @@ export default function ExperienceItem({ role, index, logo }: ExperienceItemProp
                     )}
 
                     <div className="flex flex-col gap-1 flex-1 min-w-0">
-                        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-y-1.5 gap-x-8 mb-2">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-y-1.5 gap-x-8">
                             <h3 className="text-lg font-bold text-zinc-900 group-hover:text-black transition-colors">
-                                {role.organization} – {role.role}
+                                {role.role}
+                                <span className="block text-base font-medium text-zinc-500">
+                                    {role.organization}
+                                </span>
                             </h3>
                             <span className="font-mono text-sm text-zinc-400 uppercase tracking-tighter whitespace-nowrap shrink-0 sm:pt-0.5">
                                 {role.dates}
                             </span>
                         </div>
+                        {role.location && (
+                            <p className="text-xs text-zinc-400 mb-2">{role.location}</p>
+                        )}
+                        {!role.location && <div className="mb-2" />}
 
-                {role.longDescription && (
-                    <div className="text-sm text-zinc-600 leading-relaxed max-w-2xl">
-                        <p>{role.longDescription}</p>
-                    </div>
-                )}
+                        {role.longDescription && (
+                            <div className="text-sm text-zinc-600 leading-relaxed max-w-2xl">
+                                <p>{role.longDescription}</p>
+                            </div>
+                        )}
+
+                        {/* Highlight bullets */}
+                        {role.highlights && role.highlights.length > 0 && (
+                            <ul className="mt-3 space-y-2 max-w-2xl">
+                                {role.highlights.map((h: string, i: number) => (
+                                    <li key={i} className="text-sm text-zinc-600 leading-relaxed flex items-start gap-2.5">
+                                        <span className="block w-1 h-1 mt-2 rounded-full bg-zinc-400 shrink-0" />
+                                        <span>{h}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
                         {/* Mini milestone timeline */}
                         {role.milestones && role.milestones.length > 0 && (
