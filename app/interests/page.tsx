@@ -8,6 +8,7 @@ import TravelMap from "@/components/TravelMap";
 import TravelTimeline from "@/components/TravelTimeline";
 import Reveal from "@/components/Reveal";
 import { getBlogPosts } from "@/lib/blog";
+import { getSiteText, getTravels } from "@/lib/data";
 
 export const metadata = {
     title: "Interests",
@@ -30,11 +31,6 @@ function getPhotos() {
                 .replace(/[-_]/g, " ")
                 .replace(/^\w/, (c) => c.toUpperCase()),
         }));
-}
-
-function getTravels() {
-    const filePath = path.join(process.cwd(), "public", "data", "travels.json");
-    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
 /**
@@ -75,12 +71,13 @@ export default function InterestsPage() {
     const photos = getPhotos();
     const travels = getTravels();
     const posts = getBlogPosts();
+    const text = getSiteText().interests;
 
     return (
         <div className="min-h-screen pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
-                title="Interests"
-                description="Everything that doesn't fit on a CV."
+                title={text.title}
+                description={text.description}
                 watermark="04"
                 accentWatermark="text-amber-100/70"
                 accentBorder="border-amber-200"
@@ -89,22 +86,22 @@ export default function InterestsPage() {
             {/* Photography */}
             <section>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Through the Lens
+                    {text.photographyHeading}
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    Favourites from the camera roll. Click one to see it properly.
+                    {text.photographySubheading}
                 </p>
-                <PhotoGallery photos={photos} />
+                <PhotoGallery photos={photos} emptyText={text.photographyEmpty} />
             </section>
 
             {/* Travels */}
             <section className="mt-14 md:mt-20">
                 <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Where I&apos;ve Been
+                    {text.travelsHeading}
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    Started in Kuching. It got out of hand.
+                    {text.travelsSubheading}
                 </p>
 
                 <TravelMap cities={travels.cities} summary={travels.summary} />
@@ -118,16 +115,16 @@ export default function InterestsPage() {
             <section className="mt-14 md:mt-20">
                 <Reveal>
                 <h2 className="text-sm font-bold text-zinc-400 uppercase tracking-[0.25em] mb-2">
-                    Stories
+                    {text.storiesHeading}
                 </h2>
                 <p className="text-sm text-zinc-400 mb-8">
-                    Occasionally I write things down.
+                    {text.storiesSubheading}
                 </p>
 
                 {posts.length === 0 && (
                     <div className="border border-dashed border-zinc-200 rounded-3xl p-10 text-center">
                         <p className="text-sm text-zinc-400 italic">
-                            On the way — first stories coming soon.
+                            {text.storiesEmpty}
                         </p>
                     </div>
                 )}

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Edmund.",
+    "annotation": "Est. 2003 · Kuching",
+    "subheadline": "Mechanical Engineering @ UC Berkeley & UCL",
+    "rotatingWords": [
+      "Engineer",
+      "Photographer",
+      "Traveller"
+    ],
+    "badge": "4.00 GPA · Frederic Barnes Waldron Best Student Award",
+    "resumeButton": "Download Résumé"
+  },
+  "home": {
+    "aboutHeading": "About Me",
+    "explore": {
+      "education": {
+        "title": "Education",
+        "description": "Berkeley, UCL, and the road there — grades, awards, and key modules."
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "Rocketry, research, and computational modelling challenges."
+      },
+      "experience": {
+        "title": "Experience",
+        "description": "Arup internship and leadership across engineering and community."
+      },
+      "interests": {
+        "title": "Interests",
+        "description": "Photography from the road, and a map of 22 countries so far."
+      }
+    },
+    "exploreLinkLabel": "Explore",
+    "footerLinkedinLabel": "LinkedIn",
+    "footerLinkedinUrl": "https://www.linkedin.com/in/edmund-lew",
+    "footerResumeLabel": "Résumé",
+    "footerNote": "Edmund. Built with Next.js & Tailwind."
+  },
+  "education": {
+    "title": "Education",
+    "description": "From Borneo, to Berkeley and Britain."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Built, broken, rebuilt, then written up.",
+    "builtHeading": "Things I've Built",
+    "builtSubheading": "Tap on any card for more details.",
+    "writtenHeading": "Things I've Written",
+    "writtenSubheading": "Putting pen to paper."
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Leadership roles and engineering internships that have shaped my technical and managerial capabilities."
+  },
+  "interests": {
+    "title": "Interests",
+    "description": "Everything that doesn't fit on a CV.",
+    "photographyHeading": "Through the Lens",
+    "photographySubheading": "Favourites from the camera roll. Click one to see it properly.",
+    "photographyEmpty": "Photo gallery coming soon.",
+    "travelsHeading": "Where I've Been",
+    "travelsSubheading": "Started in Kuching. It got out of hand.",
+    "storiesHeading": "Stories",
+    "storiesSubheading": "Occasionally I write things down.",
+    "storiesEmpty": "On the way — first stories coming soon."
+  }
+}

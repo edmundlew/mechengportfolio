@@ -1,0 +1,85 @@
+{
+  "education": [
+    {
+      "institution": "University College London (UCL)",
+      "degree": "MEng Mechanical Engineering with Minor in Intelligent Systems",
+      "dates": "September 2023 – Present",
+      "grades": "First Class Honours (Year 1: 87.70%, Year 2: 84.56%)",
+      "awards": [
+        "Frederic Barnes Waldron Best Student Award (2025): Awarded for the highest overall year average across all years of all undergraduate programmes.",
+        "Best Student Award Mechanical Engineering (2025): Awarded for the highest overall year average in the Mechanical Engineering programme.",
+        "Goldsmid Prize (2025): Awarded for outstanding academic performance for first and second-year undergraduate students at UCL Mechanical Engineering."
+      ],
+      "keyModules": [
+        "Year 1: Engineering Challenges, Mathematical Modelling and Analysis I, Design and Professional Skills I, Introduction to Mechanical Engineering, Mechanical Engineering Practical Skills I, Introduction to Thermodynamics and Fluid Mechanics, Engineering Dynamics, Fundamentals of Materials I",
+        "Year 2: Intelligent Systems, Mathematical Modelling and Analysis II, Manufacturing and Design, Control and Instrumentation, Intermediate Thermodynamics and Fluid Mechanics, Mechanics of Solids and Structures, Engineering Materials: Failures and Design, Design and Professional Skills II"
+      ],
+      "longDescription": "MEng Mechanical Engineering with a Minor in Intelligent Systems, on track for First Class Honours with year averages of 87.70% and 84.56%. Ranked top of the cohort in both years, earning the Frederic Barnes Waldron Best Student Award — for the highest year average across all UCL undergraduate programmes — alongside the Goldsmid Prize and Best Student in Mechanical Engineering.",
+      "certPaths": [
+        "/assets/education/certs/ucl-transcript.jpg"
+      ]
+    },
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "BSc Mechanical Engineering",
+      "dates": "August 2025 – May 2026",
+      "grades": "CGPA 4.00",
+      "awards": [],
+      "keyModules": [
+        "MECENG 108: Mechanical Properties of Engineering Materials (Grade A)",
+        "MECENG 109: Heat Transfer (Grade A)",
+        "CIVENG 11: Engineered Systems and Sustainability (Grade A)",
+        "CIVENG 126: Engineering Dynamics and Vibrations (Grade A)",
+        "MECENG 118: Introduction to Nanotechnology and Nanoscience (Grade A)",
+        "MECENG 127: Introduction to Composite Materials (Grade A+)",
+        "MECENG C180: Engineering Analysis using the Finite Element Method (Grade A+)",
+        "ENGIN 125: Engineering, Ethics and Society (Grade A+)"
+      ],
+      "longDescription": "Selected for the UCEAP Reciprocity exchange at UC Berkeley, deepening my core in materials and structures: composite materials, FEA, and mechanical behaviour of materials, alongside thermal systems and dynamics. Complemented coursework with research at the FLOW Lab, completing the year with a 4.00 GPA.",
+      "certPaths": [
+        "/assets/education/certs/berkeley-transcript.jpg"
+      ]
+    },
+    {
+      "institution": "Kolej Yayasan UEM",
+      "degree": "CAIE A-Levels",
+      "dates": "September 2021 – June 2023",
+      "grades": "4A* (Mathematics: 98%, Physics: 97%, Chemistry: 95%, Further Mathematics: 94%)",
+      "awards": [
+        "IELTS Overall Band Score 8.5 (Listening: 9.0, Reading: 9.0, Speaking: 8.5, Writing: 8.0)",
+        "Vice President: KYUEM Engineering Society",
+        "Vice President: KYUEM Badminton Club (KYBAD)",
+        "Event Manager: TedX@KYUEM 2022",
+        "Secretary: House of Diamond"
+      ],
+      "longDescription": "4A* in CAIE A-Levels (Mathematics 98%, Physics 97%, Chemistry 95%, Further Mathematics 94%) while serving as Vice President of the Engineering Society and organising TEDx@KYUEM. Also represented the college on the badminton team and served as Vice President of KY Badminton (KYBAD).",
+      "certPaths": [
+        "/assets/education/certs/kyuem-as.jpg",
+        "/assets/education/certs/kyuem-a2.jpg"
+      ]
+    },
+    {
+      "institution": "SMK Kuching High",
+      "degree": "Sijil Pelajaran Malaysia (SPM)",
+      "dates": "January 2016 – March 2021",
+      "grades": "9A+ and 1A",
+      "awards": [
+        "Anugerah Khas Pengetua 2020 (Model Student Award): Awarded for outstanding achievements in both academics and extra-curricular activities.",
+        "Treasurer of the Executive Board of Prefects (2019/2020)",
+        "Treasurer of the Board of Librarians (2019/2020)",
+        "Vice Editor of the School Magazine",
+        "Head Photographer",
+        "President of Boys' Brigade Club",
+        "Robotics Club Member"
+      ],
+      "keyModules": [
+        "A+: Mathematics, Additional Mathematics, Physics, Chemistry, Biology, Bahasa Melayu, English, Moral Studies, History",
+        "A: Chinese Language"
+      ],
+      "longDescription": "SPM: 9A+ and 1A, awarded the Anugerah Khas Pengetua 2020 (Model Student Award) for combined academic and extracurricular achievement, alongside executive roles across the school's prefect, librarian, and student boards.",
+      "certPaths": [
+        "/assets/education/certs/kuching-high-spm.jpg"
+      ]
+    }
+  ]
+}

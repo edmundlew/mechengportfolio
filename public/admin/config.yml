@@ -1,0 +1,325 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Configuration for the /admin editor.
+# Each "file" below is one form in the editor and maps to one file in the repo.
+# If a new field is added to the site, it must be added here too,
+# otherwise the editor won't show it.
+
+backend:
+  name: github
+  repo: edmundlew/mechengportfolio
+  branch: main
+  auth_methods: [token]
+
+site_url: https://mechengportfolio.vercel.app
+display_url: https://mechengportfolio.vercel.app
+
+# Default upload folder = the photography gallery.
+# Anything uploaded here shows up under "Through the Lens" on the Interests page.
+# The file name becomes the caption: "01 golden gate at dusk.jpg" -> "Golden gate at dusk".
+media_folder: /public/interests/photography
+public_folder: /interests/photography
+
+collections:
+  # ───────────────────────── Site content (one form per section) ─────────────────────────
+  - name: site
+    label: Site content
+    editor:
+      preview: false
+    files:
+      # ── About Me + status bar ──
+      - name: about
+        label: About Me & status bar
+        file: public/data/about.json
+        fields:
+          - name: longDescription
+            label: About Me text
+            widget: text
+          - name: toolkit
+            label: Toolkit chips
+            widget: list
+            required: false
+            hint: The small tags under the About Me text.
+          - name: now
+            label: Status bar (bottom of home page)
+            widget: object
+            fields:
+              - { name: location, label: Location, widget: string, hint: "e.g. Miri, Sarawak" }
+              - name: timezone
+                label: Timezone
+                widget: select
+                hint: Used for the live local time.
+                options:
+                  - { label: "Malaysia (Kuching / Miri)", value: "Asia/Kuching" }
+                  - { label: "Malaysia (Kuala Lumpur)", value: "Asia/Kuala_Lumpur" }
+                  - { label: "UK (London)", value: "Europe/London" }
+                  - { label: "US West (San Francisco)", value: "America/Los_Angeles" }
+                  - { label: "US East (New York)", value: "America/New_York" }
+                  - { label: "Singapore", value: "Asia/Singapore" }
+              - { name: activity, label: What I'm doing, widget: string, required: false, hint: "e.g. Working in OSSM" }
+
+      # ── Headings, hero and footer ──
+      - name: sitetext
+        label: Headings, hero & footer text
+        file: public/data/site-text.json
+        fields:
+          - name: hero
+            label: Home page hero
+            widget: object
+            fields:
+              - { name: greeting, label: Greeting, widget: string, hint: "e.g. Hi, I'm" }
+              - { name: name, label: Name, widget: string }
+              - { name: annotation, label: Small line under the name, widget: string }
+              - { name: subheadline, label: Sub-headline, widget: string }
+              - { name: rotatingWords, label: Rotating words, widget: list, hint: The words that cycle under the sub-headline. }
+              - { name: badge, label: Badge text, widget: string }
+              - { name: resumeButton, label: Résumé button label, widget: string }
+          - name: home
+            label: Home page
+            widget: object
+            fields:
+              - { name: aboutHeading, label: About section heading, widget: string }
+              - name: explore
+                label: Explore cards
+                widget: object
+                fields:
+                  - name: education
+                    label: Education card
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text }
+                  - name: projects
+                    label: Projects card
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text }
+                  - name: experience
+                    label: Experience card
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text }
+                  - name: interests
+                    label: Interests card
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text }
+              - { name: exploreLinkLabel, label: Explore link label, widget: string }
+              - { name: footerLinkedinLabel, label: Footer LinkedIn label, widget: string }
+              - { name: footerLinkedinUrl, label: Footer LinkedIn URL, widget: string }
+              - { name: footerResumeLabel, label: Footer résumé label, widget: string }
+              - { name: footerNote, label: Footer note, widget: string, hint: Shown after the © and the year. }
+          - name: education
+            label: Education page
+            widget: object
+            fields:
+              - { name: title, label: Page title, widget: string }
+              - { name: description, label: Line under the title, widget: text }
+          - name: projects
+            label: Projects page
+            widget: object
+            fields:
+              - { name: title, label: Page title, widget: string }
+              - { name: description, label: Line under the title, widget: text }
+              - { name: builtHeading, label: First section heading, widget: string }
+              - { name: builtSubheading, label: First section sub-line, widget: string }
+              - { name: writtenHeading, label: Second section heading, widget: string }
+              - { name: writtenSubheading, label: Second section sub-line, widget: string }
+          - name: experience
+            label: Experience page
+            widget: object
+            fields:
+              - { name: title, label: Page title, widget: string }
+              - { name: description, label: Line under the title, widget: text }
+          - name: interests
+            label: Interests page
+            widget: object
+            fields:
+              - { name: title, label: Page title, widget: string }
+              - { name: description, label: Line under the title, widget: text }
+              - { name: photographyHeading, label: Photography heading, widget: string }
+              - { name: photographySubheading, label: Photography sub-line, widget: string }
+              - { name: photographyEmpty, label: Text when there are no photos, widget: string }
+              - { name: travelsHeading, label: Travels heading, widget: string }
+              - { name: travelsSubheading, label: Travels sub-line, widget: string }
+              - { name: storiesHeading, label: Stories heading, widget: string }
+              - { name: storiesSubheading, label: Stories sub-line, widget: string }
+              - { name: storiesEmpty, label: Text when there are no stories, widget: string }
+
+      # ── Education ──
+      - name: education
+        label: Education
+        file: public/data/education.json
+        fields:
+          - name: education
+            label: Education cards
+            label_singular: Education card
+            widget: list
+            summary: "{{institution}}"
+            hint: A new school also needs a logo and flag added in the code. Ask Claude.
+            fields:
+              - { name: institution, label: Institution, widget: string }
+              - { name: degree, label: Degree / qualification, widget: string }
+              - { name: dates, label: Dates, widget: string, required: false }
+              - { name: grades, label: Grades, widget: string, required: false }
+              - { name: longDescription, label: Description, widget: text, required: false }
+              - { name: awards, label: Honors & awards, widget: list, required: false }
+              - { name: keyModules, label: Key modules, widget: list, required: false }
+              - name: certPaths
+                label: Certificate images
+                widget: list
+                required: false
+                hint: "Paths to images in public/assets/education/certs, e.g. /assets/education/certs/ucl-transcript.jpg"
+
+      # ── Projects ──
+      - name: projects
+        label: "Projects: Things I've Built"
+        file: public/data/projects.json
+        fields:
+          - name: technicalProjects
+            label: Project cards
+            label_singular: Project card
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: role, label: Role, widget: string, required: false }
+              - { name: dates, label: Dates, widget: string, required: false }
+              - { name: longDescription, label: Project overview, widget: text, required: false }
+              - name: subProjects
+                label: Sub-projects
+                label_singular: Sub-project
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: technicalTags, label: Tags / tech stack, widget: list, required: false }
+              - { name: metrics, label: Impact numbers, widget: list, required: false }
+              - { name: imageSrc, label: Card image path, widget: string, required: false, hint: "e.g. /projects/rocket/genesis-2.jpg" }
+              - { name: videoSrc, label: Card video path, widget: string, required: false, hint: "Optional looping video instead of the image. Must be an H.264 .mp4." }
+              - { name: mediaArray, label: Gallery image / video paths, widget: list, required: false }
+              - { name: reportUrl, label: Report PDF path, widget: string, required: false, hint: "e.g. /papers/photon-detector-cooling.pdf" }
+
+      # ── Papers ──
+      - name: papers
+        label: "Projects: Things I've Written"
+        file: public/data/papers.json
+        fields:
+          - name: papers
+            label: Paper cards
+            label_singular: Paper card
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: course, label: Course line, widget: string, required: false }
+              - { name: authors, label: Authors, widget: string, required: false }
+              - { name: solo, label: Solo author badge, widget: boolean, required: false, default: false }
+              - { name: abstract, label: Abstract, widget: text, required: false }
+              - { name: tags, label: Tags, widget: list, required: false }
+              - { name: pdf, label: PDF path, widget: string, hint: "The PDF must be in public/papers, e.g. /papers/my-paper.pdf" }
+
+      # ── Experience ──
+      - name: experience
+        label: Experience
+        file: public/data/experience.json
+        fields:
+          - name: professionalAndLeadership
+            label: Experience cards
+            label_singular: Experience card
+            widget: list
+            summary: "{{role}}, {{organization}}"
+            hint: Shown top to bottom in this order. A new organisation needs its logo added in the code. Ask Claude.
+            fields:
+              - { name: organization, label: Organisation, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: dates, label: Dates, widget: string, required: false }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: longDescription, label: Intro paragraph, widget: text, required: false }
+              - { name: highlights, label: Bullet points, widget: list, required: false }
+              - name: milestones
+                label: Year-by-year timeline
+                label_singular: Milestone
+                widget: list
+                required: false
+                summary: "{{year}}"
+                fields:
+                  - { name: year, label: Year, widget: string }
+                  - { name: text, label: What happened, widget: text }
+              - { name: skillsAcquired, label: Skill tags, widget: list, required: false }
+
+      # ── Travels ──
+      - name: travels
+        label: Travels (map & timeline)
+        file: public/data/travels.json
+        fields:
+          - name: summary
+            label: Totals shown above the map
+            widget: object
+            fields:
+              - { name: countries, label: Countries, widget: number, value_type: int }
+              - { name: cities, label: Cities, widget: number, value_type: int }
+          - name: years
+            label: Timeline, by year
+            label_singular: Year
+            widget: list
+            summary: "{{year}}"
+            hint: Every stop named here must also exist in "Map dots" below, spelled the same.
+            fields:
+              - { name: year, label: Year, widget: string }
+              - name: trips
+                label: Trips
+                label_singular: Trip
+                widget: list
+                summary: "{{label}} ({{period}})"
+                fields:
+                  - { name: label, label: Trip name, widget: string }
+                  - { name: period, label: When, widget: string, hint: "e.g. December 2025" }
+                  - { name: stops, label: Places visited, widget: list }
+                  - { name: flags, label: Flag emojis, widget: list, required: false }
+          - name: cities
+            label: Map dots
+            label_singular: City
+            widget: list
+            summary: "{{name}}, {{country}}"
+            fields:
+              - { name: name, label: City, widget: string }
+              - { name: country, label: Country, widget: string }
+              - { name: flag, label: Flag emoji, widget: string, required: false }
+              - { name: iso, label: Country number code, widget: string, hint: "ISO 3166 numeric code, e.g. 458 for Malaysia, 826 for UK, 840 for USA. Shades the country on the map." }
+              - name: coords
+                label: Coordinates
+                widget: list
+                hint: "Two numbers: longitude first, then latitude. e.g. 110.35 then 1.55 for Kuching."
+                min: 2
+                max: 2
+                field: { name: value, label: Number, widget: number, value_type: float }
+              - { name: visits, label: Visits, widget: list, required: false, hint: "One per visit, e.g. December 2025" }
+              - { name: home, label: Home marker, widget: boolean, required: false, default: false }
+
+  # ───────────────────────── Stories (blog posts) ─────────────────────────
+  - name: stories
+    label: Stories
+    label_singular: Story
+    folder: /content/blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{title}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    media_folder: /public/interests/blog
+    public_folder: /interests/blog
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, type: date }
+      - { name: excerpt, label: Card preview text, widget: text, required: false, hint: Leave empty to use the first paragraph. }
+      - { name: cover, label: Cover image, widget: image, required: false }
+      - { name: body, label: Story, widget: markdown }

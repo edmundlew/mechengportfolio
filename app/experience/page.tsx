@@ -1,4 +1,4 @@
-import { getPortfolioData } from "@/lib/data";
+import { getPortfolioData, getSiteText } from "@/lib/data";
 import ExperienceItem from "@/components/ExperienceItem";
 
 import PageHeader from "@/components/PageHeader";
@@ -14,13 +14,14 @@ const getLogoPath = (organization: string) => {
 
 export default async function ExperiencePage() {
     const data = await getPortfolioData();
+    const text = getSiteText().experience;
     const experience = data.professionalAndLeadership || [];
 
     return (
         <div className="min-h-screen pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
-                title="Experience"
-                description="Leadership roles and engineering internships that have shaped my technical and managerial capabilities."
+                title={text.title}
+                description={text.description}
                 watermark="03"
                 accentWatermark="text-emerald-100/70"
                 accentBorder="border-emerald-200"

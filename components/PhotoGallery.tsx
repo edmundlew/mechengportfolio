@@ -10,9 +10,10 @@ interface Photo {
 
 interface PhotoGalleryProps {
     photos: Photo[];
+    emptyText?: string;
 }
 
-export default function PhotoGallery({ photos }: PhotoGalleryProps) {
+export default function PhotoGallery({ photos, emptyText }: PhotoGalleryProps) {
     const [selected, setSelected] = useState<number | null>(null);
 
     const close = useCallback(() => setSelected(null), []);
@@ -44,7 +45,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     if (photos.length === 0) {
         return (
             <div className="border-2 border-dashed border-zinc-200 rounded-3xl p-12 text-center text-zinc-400 text-sm">
-                Photo gallery coming soon.
+                {emptyText || "Photo gallery coming soon."}
             </div>
         );
     }

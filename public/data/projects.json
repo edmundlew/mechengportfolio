@@ -1,0 +1,115 @@
+{
+  "technicalProjects": [
+    {
+      "title": "FLOW Lab Research (UC Berkeley)",
+      "role": "Undergraduate Researcher",
+      "imageSrc": "/projects/flow-lab/cooling-rig.jpg",
+      "technicalTags": [
+        "Python",
+        "Mechatronics",
+        "3D Printing",
+        "Thermal Control"
+      ],
+      "metrics": [],
+      "longDescription": "Designed a physical enclosure for a high-sensitivity ME3 Photon Detector array used for flow regime analysis. Developed a Raspberry Pi Pico W-based cooling controller with PWM pump regulation and a visual/auditory alarm system to prevent thermal damage. Fabricated a custom air generation module with a high-efficiency fan funnel and MEMS velocity sensor.",
+      "mediaArray": [],
+      "reportUrl": "/papers/photon-detector-cooling.pdf"
+    },
+    {
+      "title": "UCL Rocketry",
+      "role": "Recovery Systems Lead",
+      "imageSrc": "/projects/rocket/genesis-2.jpg",
+      "technicalTags": [
+        "Fusion 360",
+        "Electromagnetics",
+        "Systems Engineering"
+      ],
+      "metrics": [
+        "1st Place (National Rocketry Championships 2024)",
+        "#1 UK/EU entrant (Spaceport America Cup 2025)"
+      ],
+      "longDescription": "Designed the ServoMag parachute ejection system, utilizing a servomotor and electromagnet for precise electronic actuation. Developed a dual-deployment recovery system with main and drogue parachutes, leading to a successful recovery and top-ranking at the Spaceport America Cup.",
+      "mediaArray": [
+        "/projects/rocket/genesis-1.jpg",
+        "/projects/rocket/murphy.jpg",
+        "/projects/rocket/flight.mp4"
+      ]
+    },
+    {
+      "title": "UCL Mechathon",
+      "role": "Aerodynamics & Design Lead",
+      "imageSrc": "/projects/mechathon/glider-2.jpg",
+      "technicalTags": [
+        "Fusion 360",
+        "Aerodynamics",
+        "Laser Cutting",
+        "3D Printing"
+      ],
+      "metrics": [
+        "1st Runner Up (Top 2 out of 15 teams)"
+      ],
+      "longDescription": "Collaborated in a five-member team to design and manufacture an elastic-band-powered aircraft within a 48-hour development cycle. Utilized Fusion 360 to model an aerodynamically optimized glider and employed laser cutting and 3D printing to achieve first runner-up status.",
+      "mediaArray": [
+        "/projects/mechathon/glider-2.jpg",
+        "/projects/mechathon/glider-1.jpg",
+        "/projects/mechathon/flight-2.mp4",
+        "/projects/mechathon/flight-3.mp4"
+      ],
+      "videoSrc": "/projects/mechathon/flight-1.mp4"
+    },
+    {
+      "title": "Mathematical Modelling",
+      "subProjects": [
+        {
+          "title": "Population Modelling",
+          "description": "Fitted Malthusian and logistic growth models to two centuries of census data in MATLAB, estimating intrinsic growth rates and carrying capacity from real-world records."
+        },
+        {
+          "title": "Pandemic Simulation",
+          "description": "Derived the SIR compartmental equations from first principles and simulated COVID-19 and H1N1 outbreak scenarios, quantified via least squares regression and Euler's method."
+        },
+        {
+          "title": "Footbridge Dynamics",
+          "description": "Modelled pedestrian-induced lateral bridge vibration as a damped second-order ODE under square-wave gait forcing — solved with Fourier series and finite differences, closing with a sensitivity study across walking frequencies (0.7–1.2 Hz)."
+        },
+        {
+          "title": "Image Compression & Edge Detection",
+          "description": "Applied eigendecomposition and rank-r SVD to compress grayscale images, and vector calculus gradient operators for edge detection — visualising the fidelity/storage trade-off across compression levels."
+        }
+      ],
+      "imageSrc": "/projects/math-modelling/svd-compression.jpg",
+      "technicalTags": [
+        "MATLAB",
+        "Numerical Optimization",
+        "ODEs",
+        "Vector Calculus"
+      ],
+      "metrics": [],
+      "longDescription": "A two-year arc of modelling coursework at UCL (ENGF0003 & ENGF0004), turning analytical mathematics into working MATLAB simulations of real systems. The work spans fitting logistic growth models to two centuries of population data, simulating epidemics with SIR compartmental models, predicting pedestrian-induced footbridge vibrations with Fourier series and finite-difference schemes, and compressing images via eigendecomposition and SVD.",
+      "mediaArray": [
+        "/projects/math-modelling/population-logistic.jpg",
+        "/projects/math-modelling/sir-dynamics.jpg",
+        "/projects/math-modelling/bridge-3d.jpg",
+        "/projects/math-modelling/svd-compression.jpg"
+      ]
+    },
+    {
+      "title": "UCL Engineering Challenges",
+      "imageSrc": "/projects/pylon/pylon-3.jpg",
+      "technicalTags": [
+        "GSA Structural Analysis",
+        "Truss Theory",
+        "Material Optimization"
+      ],
+      "metrics": [
+        "235N load sustained"
+      ],
+      "longDescription": "Engineered a 1kg balsa wood pylon using GSA Structural Analysis and truss theory. The design successfully sustained a record-breaking load of 235N during physical performance testing.",
+      "mediaArray": [
+        "/projects/pylon/pylon-2.jpg",
+        "/projects/pylon/pylon-1.jpg",
+        "/projects/pylon/pylon-4.jpg"
+      ]
+    }
+  ]
+}

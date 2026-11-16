@@ -1,48 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getPortfolioData } from "@/lib/data";
+import { getPortfolioData, getSiteText } from "@/lib/data";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import NowCard from "@/components/NowCard";
 
-const exploreLinks = [
-    {
-        title: "Education",
-        href: "/education",
-        watermark: "01",
-        accent: "group-hover:text-sky-100",
-        description: "Berkeley, UCL, and the road there — grades, awards, and key modules.",
-    },
-    {
-        title: "Projects",
-        href: "/projects",
-        watermark: "02",
-        accent: "group-hover:text-violet-100",
-        description: "Rocketry, research, and computational modelling challenges.",
-    },
-    {
-        title: "Experience",
-        href: "/experience",
-        watermark: "03",
-        accent: "group-hover:text-emerald-100",
-        description: "Arup internship and leadership across engineering and community.",
-    },
-    {
-        title: "Interests",
-        href: "/interests",
-        watermark: "04",
-        accent: "group-hover:text-amber-100",
-        description: "Photography from the road, and a map of 22 countries so far.",
-    },
+// Layout of the four Explore cards. Their wording lives in public/data/site-text.json.
+const exploreCards = [
+    { key: "education", href: "/education", watermark: "01", accent: "group-hover:text-sky-100" },
+    { key: "projects", href: "/projects", watermark: "02", accent: "group-hover:text-violet-100" },
+    { key: "experience", href: "/experience", watermark: "03", accent: "group-hover:text-emerald-100" },
+    { key: "interests", href: "/interests", watermark: "04", accent: "group-hover:text-amber-100" },
 ];
 
 export default async function Home() {
     const data = await getPortfolioData();
+    const text = getSiteText();
+    const exploreLinks = exploreCards.map((card) => ({
+        ...card,
+        title: text.home.explore?.[card.key]?.title || "",
+        description: text.home.explore?.[card.key]?.description || "",
+    }));
 
     return (
         <div className="flex flex-col min-h-screen">
             {/* Client-Side Animated Hero */}
-            <Hero />
+            <Hero text={text.hero} />
 
             {/* About Section - Photo + Statement */}
             <section className="px-6 pb-20 max-w-4xl mx-auto w-full">
@@ -63,7 +46,7 @@ export default async function Home() {
 
                         {/* Statement */}
                         <div>
-                            <h2 className="font-display text-2xl font-semibold mb-5 text-zinc-800 tracking-tight">About Me</h2>
+                            <h2 className="font-display text-2xl font-semibold mb-5 text-zinc-800 tracking-tight">{text.home.aboutHeading}</h2>
                             <p className="text-base md:text-lg text-zinc-600 leading-relaxed font-light">
                                 {data.personalInfo.longDescription}
                             </p>
@@ -109,7 +92,7 @@ export default async function Home() {
                                 {link.description}
                             </p>
                             <span className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-400 group-hover:text-zinc-900 transition-colors relative z-10">
-                                Explore
+                                {text.home.exploreLinkLabel}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                 </svg>
@@ -131,12 +114,12 @@ export default async function Home() {
                 )}
                 <div className="flex items-center justify-center gap-6 mb-4 text-sm">
                     <a
-                        href="https://www.linkedin.com/in/edmund-lew"
+                        href={text.home.footerLinkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zinc-500 hover:text-zinc-900 transition-colors"
                     >
-                        LinkedIn
+                        {text.home.footerLinkedinLabel}
                     </a>
                     <span className="text-zinc-200">|</span>
                     <a
@@ -145,10 +128,10 @@ export default async function Home() {
                         rel="noopener noreferrer"
                         className="text-zinc-500 hover:text-zinc-900 transition-colors"
                     >
-                        Résumé
+                        {text.home.footerResumeLabel}
                     </a>
                 </div>
-                <p className="text-sm text-zinc-400">© {new Date().getFullYear()} Edmund. Built with Next.js &amp; Tailwind.</p>
+                <p className="text-sm text-zinc-400">© {new Date().getFullYear()} {text.home.footerNote}</p>
             </footer>
         </div>
     );

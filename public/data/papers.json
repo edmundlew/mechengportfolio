@@ -1,0 +1,56 @@
+{
+  "papers": [
+    {
+      "title": "Implementation and Control of a Cooling Subsystem for an ME3 X-ray Photon Detector Enclosure",
+      "course": "MECENG 196 · Undergraduate Research (FLOW Lab)",
+      "authors": "Edmund Lew Teng Jun",
+      "solo": true,
+      "abstract": "Design, assembly, and control of a closed-loop coolant system for an X-ray photon detector — a temperature-banded PWM control scheme on a Raspberry Pi Pico 2W, a 180W thermoelectric heat exchanger loop, and validation against the detector's 40°C thermal safety threshold.",
+      "tags": [
+        "Thermal Systems",
+        "Control",
+        "Embedded Hardware"
+      ],
+      "pdf": "/papers/photon-detector-cooling.pdf"
+    },
+    {
+      "title": "Phonon-Glass Electron-Crystal (PGEC) Behaviour in Nanowire-Based Solid-State Heat Pumps for Residential Cooling",
+      "course": "MECENG 118 · Nanotechnology and Nanoscience",
+      "authors": "Edmund Lew Teng Jun",
+      "solo": true,
+      "abstract": "Investigates silicon nanowire thermoelectrics as a refrigerant-free alternative to vapor-compression cooling, analysing how phonon-boundary scattering can decouple thermal and electrical conductivity to raise device efficiency.",
+      "tags": [
+        "Nanotechnology",
+        "Thermoelectrics",
+        "Sustainability"
+      ],
+      "pdf": "/papers/nanowire-heat-pumps.pdf"
+    },
+    {
+      "title": "Effect of Hierarchy on the Mechanical Performance of Honeycomb Structures",
+      "course": "MECENG 127 · Composite Materials",
+      "authors": "with J. Merioles, Y. R. Ioriya, J. Kim, J. Park",
+      "solo": false,
+      "abstract": "FEA comparison of standard versus first-order hierarchical honeycombs in carbon fiber-Onyx composite, quantifying effective stiffness, peak principal stress, and strain energy under in-plane and out-of-plane loading.",
+      "tags": [
+        "FEA",
+        "Composites",
+        "Structural Mechanics"
+      ],
+      "pdf": "/papers/honeycomb-hierarchy.pdf"
+    },
+    {
+      "title": "The Accountability Gap in Autonomous Defense Systems: An Ethical Audit of U.S. Regulations and Engineering",
+      "course": "ENGIN 125 · Engineering, Ethics and Society",
+      "authors": "with A. Wang, N. Luo, E. Wei",
+      "solo": false,
+      "abstract": "An audit of how U.S. regulatory frameworks assign — and fail to assign — responsibility when autonomous weapons systems cause harm, and what that gap demands of the engineers who build them.",
+      "tags": [
+        "Ethics",
+        "Policy",
+        "Autonomous Systems"
+      ],
+      "pdf": "/papers/autonomous-defense-ethics.pdf"
+    }
+  ]
+}

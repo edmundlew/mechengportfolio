@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { marked } from "marked";
+import { parse as parseYaml } from "yaml";
 
 export interface BlogPostMeta {
     slug: string;
@@ -17,7 +18,11 @@ export interface BlogPost extends BlogPostMeta {
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
-/** Parses the "---" frontmatter block at the top of a markdown file. */
+/**
+ * Parses the "---" frontmatter block at the top of a markdown file.
+ * Uses a real YAML parser so posts saved by the /admin editor (quoted values,
+ * multi-line text) read the same as hand-written ones.
+ */
 function parseFrontmatter(raw: string): {
     meta: Record<string, string>;
     body: string;
@@ -26,15 +31,17 @@ function parseFrontmatter(raw: string): {
     if (!match) return { meta: {}, body: raw };
 
     const meta: Record<string, string> = {};
-    for (const line of match[1].split(/\r?\n/)) {
-        const idx = line.indexOf(":");
-        if (idx === -1) continue;
-        const key = line.slice(0, idx).trim();
-        const val = line
-            .slice(idx + 1)
-            .trim()
-            .replace(/^["']|["']$/g, "");
-        if (key) meta[key] = val;
+    try {
+        const parsed = parseYaml(match[1]) || {};
+        for (const [key, value] of Object.entries(parsed)) {
+            if (value === null || value === undefined) continue;
+            meta[key] =
+                value instanceof Date
+                    ? value.toISOString().slice(0, 10)
+                    : String(value).trim();
+        }
+    } catch {
+        // Malformed header: fall back to treating the post as having no metadata
     }
     return { meta, body: raw.slice(match[0].length) };
 }
@@ -68,7 +75,7 @@ function readPost(filename: string): BlogPost {
     const slug = filename.replace(/\.md$/, "");
     const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
     const { meta, body } = parseFrontmatter(raw);
-    const date = meta.date || "";
+    const date = (meta.date || "").slice(0, 10);
     return {
         slug,
         title: meta.title || slug.replace(/[-_]/g, " "),

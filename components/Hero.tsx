@@ -2,7 +2,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const ROTATING_WORDS = ['Engineer', 'Photographer', 'Traveller'];
+interface HeroText {
+    greeting: string;
+    name: string;
+    annotation: string;
+    subheadline: string;
+    rotatingWords: string[];
+    badge: string;
+    resumeButton: string;
+}
 
 const container = {
     hidden: {},
@@ -20,16 +28,19 @@ const item = {
     },
 };
 
-export default function Hero() {
+export default function Hero({ text }: { text: HeroText }) {
+    const words = text.rotatingWords && text.rotatingWords.length > 0 ? text.rotatingWords : [''];
     const [wordIndex, setWordIndex] = useState(0);
 
     useEffect(() => {
         const id = setInterval(
-            () => setWordIndex((i) => (i + 1) % ROTATING_WORDS.length),
+            () => setWordIndex((i) => (i + 1) % words.length),
             2400
         );
         return () => clearInterval(id);
-    }, []);
+    }, [words.length]);
+
+    const currentWord = words[wordIndex % words.length];
 
     return (
         <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-6 text-center w-full mx-auto overflow-hidden">
@@ -51,9 +62,9 @@ export default function Hero() {
                     style={{ fontSize: "clamp(2.75rem, 7.5vw, 6.5rem)", lineHeight: 1.02 }}
                     className="font-display font-bold tracking-tight text-zinc-900"
                 >
-                    Hi, I&apos;m{" "}
+                    {text.greeting}{" "}
                     <span className="bg-gradient-to-b from-zinc-900 via-zinc-700 to-zinc-400 bg-clip-text text-transparent">
-                        Edmund.
+                        {text.name}
                     </span>
                 </motion.h1>
 
@@ -66,7 +77,7 @@ export default function Hero() {
                     <span className="relative block w-12 md:w-20 h-px bg-zinc-300">
                         <span className="absolute left-0 -top-[3px] h-[7px] w-px bg-zinc-300" />
                     </span>
-                    Est. 2003 · Kuching
+                    {text.annotation}
                     <span className="relative block w-12 md:w-20 h-px bg-zinc-300">
                         <span className="absolute right-0 -top-[3px] h-[7px] w-px bg-zinc-300" />
                     </span>
@@ -77,25 +88,25 @@ export default function Hero() {
                     variants={item}
                     className="text-xl md:text-3xl font-light text-zinc-500 max-w-3xl"
                 >
-                    Mechanical Engineering @ UC Berkeley &amp; UCL
+                    {text.subheadline}
                 </motion.p>
 
                 {/* Rotating specialist word */}
                 <motion.div
                     variants={item}
                     className="h-5 md:h-6 overflow-hidden text-[0.65rem] md:text-sm font-medium tracking-[0.25em] text-zinc-400 uppercase"
-                    aria-label="Engineer, Photographer, Traveller"
+                    aria-label={words.join(", ")}
                 >
                     <AnimatePresence mode="wait">
                         <motion.span
-                            key={ROTATING_WORDS[wordIndex]}
+                            key={currentWord}
                             initial={{ y: '110%', opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: '-110%', opacity: 0 }}
                             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                             className="block"
                         >
-                            {ROTATING_WORDS[wordIndex]}
+                            {currentWord}
                         </motion.span>
                     </AnimatePresence>
                 </motion.div>
@@ -106,7 +117,7 @@ export default function Hero() {
                     className="inline-flex flex-wrap items-center justify-center text-center gap-2 px-4 py-1.5 max-w-full rounded-full border border-zinc-200/70 bg-white/60 backdrop-blur-sm text-[0.65rem] md:text-xs font-medium tracking-[0.2em] text-zinc-500 uppercase shadow-sm"
                 >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
-                    4.00 GPA · Frederic Barnes Waldron Best Student Award
+                    {text.badge}
                 </motion.div>
 
                 {/* CTA */}
@@ -117,7 +128,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         className="px-7 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium tracking-wide shadow-lg shadow-zinc-900/10 hover:bg-zinc-700 hover:shadow-zinc-900/20 transition-all duration-300 hover:-translate-y-0.5"
                     >
-                        Download Résumé
+                        {text.resumeButton}
                     </a>
                 </motion.div>
             </motion.div>

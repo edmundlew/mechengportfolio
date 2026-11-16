@@ -1,4 +1,4 @@
-import { getPortfolioData } from "@/lib/data";
+import { getPortfolioData, getSiteText } from "@/lib/data";
 import EducationCard from "@/components/EducationCard";
 
 // Helper to map institution names to existing logo paths
@@ -30,13 +30,14 @@ import Reveal from "@/components/Reveal";
 
 export default async function EducationPage() {
     const data = await getPortfolioData();
+    const text = getSiteText().education;
     const educationArr = data.education || [];
 
     return (
         <div className="min-h-screen w-full pt-28 md:pt-48 pb-20 px-6 max-w-5xl mx-auto">
             <PageHeader
-                title="Education"
-                description="From Borneo, to Berkeley and Britain."
+                title={text.title}
+                description={text.description}
                 watermark="01"
                 accentWatermark="text-sky-100/70"
                 accentBorder="border-sky-200"
